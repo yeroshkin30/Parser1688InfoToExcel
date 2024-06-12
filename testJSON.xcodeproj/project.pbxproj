@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F29879E2C18DA6D00B2746F /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 4F29879D2C18DA6D00B2746F /* SwiftXLSX */; };
+		4F2987AF2C1A1AA900B2746F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987AE2C1A1AA900B2746F /* main.swift */; };
+		4F2987B12C1A5FBB00B2746F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987B02C1A5FBB00B2746F /* Size.swift */; };
+		4F2987B32C1A627000B2746F /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987B22C1A627000B2746F /* MainModel.swift */; };
 		4F40FC8C2C167BBE00AEB662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */; };
 		4F40FC8E2C167BBE00AEB662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC8D2C167BBE00AEB662 /* ViewController.swift */; };
 		4F40FC902C167BBF00AEB662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */; };
-		4F40FC932C167BBF00AEB662 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FC922C167BBF00AEB662 /* Base */; };
 		4F40FC9E2C167BBF00AEB662 /* testJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC9D2C167BBF00AEB662 /* testJSONTests.swift */; };
 		4F40FCA82C167BBF00AEB662 /* testJSONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCA72C167BBF00AEB662 /* testJSONUITests.swift */; };
 		4F40FCAA2C167BBF00AEB662 /* testJSONUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCA92C167BBF00AEB662 /* testJSONUITestsLaunchTests.swift */; };
+		4F40FCB72C167C2000AEB662 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCB62C167C2000AEB662 /* Network.swift */; };
+		4F40FCB92C167D0200AEB662 /* ProductProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCB82C167D0200AEB662 /* ProductProperties.swift */; };
+		4F40FCBB2C167D2600AEB662 /* itemJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FCBA2C167D2600AEB662 /* itemJSON.json */; };
+		4F40FCBD2C167D5900AEB662 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCBC2C167D5900AEB662 /* Models.swift */; };
+		4F6032962C1741130074FCD5 /* XLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6032952C1741130074FCD5 /* XLHandler.swift */; };
+		4F6032992C1766520074FCD5 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6032982C1766520074FCD5 /* CoreXLSX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +43,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F2987AE2C1A1AA900B2746F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4F2987B02C1A5FBB00B2746F /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		4F2987B22C1A627000B2746F /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		4F40FC882C167BBE00AEB662 /* testJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F40FC8D2C167BBE00AEB662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F40FC922C167BBF00AEB662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F40FC942C167BBF00AEB662 /* testJSON.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testJSON.entitlements; sourceTree = "<group>"; };
 		4F40FC992C167BBF00AEB662 /* testJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FC9D2C167BBF00AEB662 /* testJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONTests.swift; sourceTree = "<group>"; };
 		4F40FCA32C167BBF00AEB662 /* testJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FCA72C167BBF00AEB662 /* testJSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONUITests.swift; sourceTree = "<group>"; };
 		4F40FCA92C167BBF00AEB662 /* testJSONUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F40FCB62C167C2000AEB662 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4F40FCB82C167D0200AEB662 /* ProductProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductProperties.swift; sourceTree = "<group>"; };
+		4F40FCBA2C167D2600AEB662 /* itemJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itemJSON.json; sourceTree = "<group>"; };
+		4F40FCBC2C167D5900AEB662 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4F6032952C1741130074FCD5 /* XLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6032992C1766520074FCD5 /* CoreXLSX in Frameworks */,
+				4F29879E2C18DA6D00B2746F /* SwiftXLSX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +114,16 @@
 			isa = PBXGroup;
 			children = (
 				4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */,
+				4F2987AE2C1A1AA900B2746F /* main.swift */,
 				4F40FC8D2C167BBE00AEB662 /* ViewController.swift */,
+				4F2987B02C1A5FBB00B2746F /* Size.swift */,
+				4F6032952C1741130074FCD5 /* XLHandler.swift */,
+				4F40FCB62C167C2000AEB662 /* Network.swift */,
+				4F40FCB82C167D0200AEB662 /* ProductProperties.swift */,
+				4F40FCBC2C167D5900AEB662 /* Models.swift */,
+				4F2987B22C1A627000B2746F /* MainModel.swift */,
+				4F40FCBA2C167D2600AEB662 /* itemJSON.json */,
 				4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */,
-				4F40FC912C167BBF00AEB662 /* Main.storyboard */,
 				4F40FC942C167BBF00AEB662 /* testJSON.entitlements */,
 			);
 			path = testJSON;
@@ -137,6 +162,10 @@
 			dependencies = (
 			);
 			name = testJSON;
+			packageProductDependencies = (
+				4F6032982C1766520074FCD5 /* CoreXLSX */,
+				4F29879D2C18DA6D00B2746F /* SwiftXLSX */,
+			);
 			productName = testJSON;
 			productReference = 4F40FC882C167BBE00AEB662 /* testJSON.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +238,10 @@
 				Base,
 			);
 			mainGroup = 4F40FC7F2C167BBE00AEB662;
+			packageReferences = (
+				4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
+				4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
+			);
 			productRefGroup = 4F40FC892C167BBE00AEB662 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,8 +258,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F40FCBB2C167D2600AEB662 /* itemJSON.json in Resources */,
 				4F40FC902C167BBF00AEB662 /* Assets.xcassets in Resources */,
-				4F40FC932C167BBF00AEB662 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2987B12C1A5FBB00B2746F /* Size.swift in Sources */,
+				4F6032962C1741130074FCD5 /* XLHandler.swift in Sources */,
+				4F2987AF2C1A1AA900B2746F /* main.swift in Sources */,
+				4F40FCB92C167D0200AEB662 /* ProductProperties.swift in Sources */,
 				4F40FC8E2C167BBE00AEB662 /* ViewController.swift in Sources */,
+				4F2987B32C1A627000B2746F /* MainModel.swift in Sources */,
 				4F40FC8C2C167BBE00AEB662 /* AppDelegate.swift in Sources */,
+				4F40FCB72C167C2000AEB662 /* Network.swift in Sources */,
+				4F40FCBD2C167D5900AEB662 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,17 +327,6 @@
 			targetProxy = 4F40FCA42C167BBF00AEB662 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4F40FC912C167BBF00AEB662 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F40FC922C167BBF00AEB662 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4F40FCAB2C167BBF00AEB662 /* Debug */ = {
@@ -431,7 +460,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +486,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,6 +611,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/3973770/SwiftXLSX";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/CoreXLSX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F29879D2C18DA6D00B2746F /* SwiftXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
+			productName = SwiftXLSX;
+		};
+		4F6032982C1766520074FCD5 /* CoreXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */;
+			productName = CoreXLSX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F40FC802C167BBE00AEB662 /* Project object */;
 }

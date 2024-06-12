@@ -7,14 +7,20 @@
 
 import Cocoa
 
-@main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
-
+    var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        window = NSWindow(contentRect: NSMakeRect(0, 0, 400, 300),
+                          styleMask: [.titled, .closable, .resizable, .miniaturizable],
+                          backing: .buffered,
+                          defer: false)
+        window.center()
+        window.title = "AppKit App"
+        window.makeKeyAndOrderFront(nil)
+        window.contentViewController = ViewController()
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
