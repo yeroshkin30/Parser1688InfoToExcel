@@ -37,4 +37,23 @@ enum Size: Int {
             return .oneSize
         }
     }
+
+    var value: String {
+        switch self {
+        case .S:
+            return "S"
+        case .M:
+            return "M"
+        case .L:
+            return "L"
+        case .XL:
+            return "XL"
+        case .XXL:
+            return "XXL"
+        case .XXXL:
+            return "XXXL"
+        case .oneSize:
+            return "oneSize"
+        }
+    }
 }

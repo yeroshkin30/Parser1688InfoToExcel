@@ -1,0 +1,413 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "item_id": 641084478331,
+    "product_url": "",
+    "title": "睡裙女夏季人造棉翻领开襟宽松家居服女士睡袍春夏睡衣裙批发",
+    "category_id": 122460003,
+    "root_category_id": 312,
+    "currency": "CNY",
+    "offer_unit": "件",
+    "product_props": [
+      {
+        "面料名称": "针织棉"
+      },
+      {
+        "款式": "连体"
+      },
+      {
+        "主面料成分": "棉"
+      },
+      {
+        "主面料成分的含量": "98"
+      },
+      {
+        "面料厚薄（克重）": "超厚(351-400克/平米)"
+      },
+      {
+        "功能": "休闲,透气,睡眠,沐浴,保暖,舒适"
+      },
+      {
+        "上市时间": "2020年"
+      },
+      {
+        "适合季节": "夏季"
+      },
+      {
+        "适用人群类别": "女士"
+      },
+      {
+        "适用场景": "居家,酒店浴场"
+      },
+      {
+        "颜色": "蓝花卉 人棉短袖睡裙,绿花卉 人棉短袖睡裙,粉花 人棉短袖睡裙,黄葡萄 人棉短袖睡裙,如意花 人棉短袖睡裙,灰百合 人棉短袖睡裙,粉百合 人棉短袖睡裙,灰玉兰 人棉短袖睡裙,粉玉兰 人棉短袖睡裙"
+      },
+      {
+        "尺码": "M,L"
+      },
+      {
+        "产地": "潍坊"
+      },
+      {
+        "货号": "LJH"
+      },
+      {
+        "误差范围": "2cm"
+      },
+      {
+        "是否跨境出口专供货源": "否"
+      },
+      {
+        "裙长": "中裙"
+      },
+      {
+        "主面料成分含量": "95%（含）-100%（不含）"
+      },
+      {
+        "风格": "简约休闲"
+      },
+      {
+        "面料厚薄克重": "超薄(41-60克/平米)"
+      }
+    ],
+    "main_imgs": [
+      "https://cbu01.alicdn.com/img/ibank/O1CN01WE3Lj41xJmb97RbRJ_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01DOKR4q1xJmbD2kFc6_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01BqMifR1xJmb9fxv8K_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01H4AFmB1xJmbBWtImC_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN012in3JN1xJmbC2Fiae_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01YceHpY1xJmbBeVrHU_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01Ynf0pj1xJmbGNhShp_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01Jiurds1xJmbIRJOL4_!!2365816423-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01iPJvMK1xJmbEvxDqn_!!2365816423-0-cib.jpg"
+    ],
+    "video_url": "",
+    "detail_url": "https://air.1688.com/pages/od/app-desc/d7p56fw2w/index.html?url=https://itemcdn.tmall.com/1688offer/icoss1316005663ea19a9e2f7ea1e8c&offerId=641084478331&sellerLoginId=雅依外贸服饰批发",
+    "sale_count": "1331",
+    "sale_info": {
+      "sale_quantity_90days": "1331"
+    },
+    "price_info": {
+      "price": "35.00",
+      "origin_price": null,
+      "price_min": "35.00",
+      "price_max": "35.00",
+      "origin_price_min": "35.00",
+      "origin_price_max": "35.00",
+      "discount_price": ""
+    },
+    "tiered_price_info": {
+      "prices": [
+        {
+          "price": "35.00",
+          "beginAmount": "1"
+        }
+      ],
+      "begin_num": "1"
+    },
+    "mixed_batch": {
+      "mix_num": "1",
+      "mix_begin": "0",
+      "mix_amount": "1",
+      "shop_mix_num": "2147483647"
+    },
+    "shop_info": {
+      "shop_name": "安丘市雅依服饰经销处",
+      "shop_url": "https://winport.m.1688.com/page/index.html?memberId=b2b-2365816423",
+      "seller_login_id": "雅依外贸服饰批发",
+      "seller_user_id": "2365816423",
+      "seller_member_id": "b2b-2365816423"
+    },
+    "delivery_info": {
+      "location": "山东省潍坊市",
+      "location_code": "12186867",
+      "delivery_fee": 5,
+      "unit_weight": 0.3,
+      "template_id": "2878665"
+    },
+    "sku_price_scale": "￥35.00",
+    "sku_price_scale_original": "￥35.00",
+    "sku_price_range": {
+      "stock": "85975",
+      "begin_num": "1",
+      "mix_param": {
+        "mixNum": "1",
+        "mixBegin": "0",
+        "mixAmount": "1",
+        "shopMixNum": "2147483647",
+        "supportMix": "true"
+      },
+      "sku_param": [
+        {
+          "price": "35.00",
+          "beginAmount": "1"
+        }
+      ]
+    },
+    "sku_props": [
+      {
+        "pid": "0",
+        "prop_name": "颜色",
+        "values": [
+          {
+            "vid": "0",
+            "name": "蓝花卉 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01Ynf0pj1xJmbGNhShp_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "1",
+            "name": "绿花卉 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01iPJvMK1xJmbEvxDqn_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "2",
+            "name": "粉花 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01BQVYcL1xJmbBWshIb_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "3",
+            "name": "黄葡萄 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01Jiurds1xJmbIRJOL4_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "4",
+            "name": "如意花 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01tDFRt31xJmbHuUc7j_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "5",
+            "name": "灰百合 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01YceHpY1xJmbBeVrHU_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "6",
+            "name": "粉百合 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01ZwkrAm1xJmbHuVgem_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "7",
+            "name": "灰玉兰 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01Fui9gn1xJmbE8GDgu_!!2365816423-0-cib.jpg"
+          },
+          {
+            "vid": "8",
+            "name": "粉玉兰 人棉短袖睡裙",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01LEP0Vf1xJmbH3LzXI_!!2365816423-0-cib.jpg"
+          }
+        ]
+      },
+      {
+        "pid": "1",
+        "prop_name": "尺码",
+        "values": [
+          {
+            "vid": "0",
+            "name": "M",
+            "imageUrl": ""
+          },
+          {
+            "vid": "1",
+            "name": "L",
+            "imageUrl": ""
+          }
+        ]
+      }
+    ],
+    "skus": [
+      {
+        "skuid": "4775224922209",
+        "specid": "0e56406e462629937d64c8fed57d1920",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8858",
+        "props_ids": "0:2;1:0",
+        "props_names": "粉花 人棉短袖睡裙;M",
+        "sale_count": "12"
+      },
+      {
+        "skuid": "4775224922207",
+        "specid": "ace2bb9ea687383cf73bb3823dce0952",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8814",
+        "props_ids": "0:1;1:0",
+        "props_names": "绿花卉 人棉短袖睡裙;M",
+        "sale_count": "19"
+      },
+      {
+        "skuid": "4775224922210",
+        "specid": "33957102c0735923f4cb91b8bbb80c37",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8811",
+        "props_ids": "0:2;1:1",
+        "props_names": "粉花 人棉短袖睡裙;L",
+        "sale_count": "16"
+      },
+      {
+        "skuid": "4775224922224",
+        "specid": "f050780d0b22657b75835dd64af514bb",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "140",
+        "props_ids": "0:8;1:1",
+        "props_names": "粉玉兰 人棉短袖睡裙;L",
+        "sale_count": "2"
+      },
+      {
+        "skuid": "4775224922218",
+        "specid": "3322c04f6f4d1dafbe45603ecf65c5a5",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "0",
+        "props_ids": "0:5;1:1",
+        "props_names": "灰百合 人棉短袖睡裙;L",
+        "sale_count": "11"
+      },
+      {
+        "skuid": "4775224922223",
+        "specid": "ecb3d347f96cf82a9017f5f96d25d39b",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "140",
+        "props_ids": "0:8;1:0",
+        "props_names": "粉玉兰 人棉短袖睡裙;M",
+        "sale_count": "2"
+      },
+      {
+        "skuid": "4775224922217",
+        "specid": "5da88cd40a2bfc0801ec8fcf19c891c8",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "0",
+        "props_ids": "0:5;1:0",
+        "props_names": "灰百合 人棉短袖睡裙;M",
+        "sale_count": "7"
+      },
+      {
+        "skuid": "4775224922208",
+        "specid": "a61fefd1bca0994b6f4f867abae770bb",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8774",
+        "props_ids": "0:1;1:1",
+        "props_names": "绿花卉 人棉短袖睡裙;L",
+        "sale_count": "24"
+      },
+      {
+        "skuid": "4775224922213",
+        "specid": "4fed62c68b69d2d39ef0ad8ffc15bc6d",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8136",
+        "props_ids": "0:3;1:0",
+        "props_names": "黄葡萄 人棉短袖睡裙;M",
+        "sale_count": "6"
+      },
+      {
+        "skuid": "4775224922205",
+        "specid": "ccbc651cd962cc8829bf9bfb993bc75b",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8781",
+        "props_ids": "0:0;1:0",
+        "props_names": "蓝花卉 人棉短袖睡裙;M",
+        "sale_count": "26"
+      },
+      {
+        "skuid": "4775224922214",
+        "specid": "a45b9739ad30b00eb64888fadb5cc4e7",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8113",
+        "props_ids": "0:3;1:1",
+        "props_names": "黄葡萄 人棉短袖睡裙;L",
+        "sale_count": "11"
+      },
+      {
+        "skuid": "4775224922206",
+        "specid": "6b574bbcb05c13968a1789483d4c29d5",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8810",
+        "props_ids": "0:0;1:1",
+        "props_names": "蓝花卉 人棉短袖睡裙;L",
+        "sale_count": "33"
+      },
+      {
+        "skuid": "4775224922221",
+        "specid": "4970f1ad3ed61c9ce6ac61d55acef4ec",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "0",
+        "props_ids": "0:7;1:0",
+        "props_names": "灰玉兰 人棉短袖睡裙;M",
+        "sale_count": "1"
+      },
+      {
+        "skuid": "4775224922220",
+        "specid": "cb7de0c7eb5f4e7433c8e02f727087dd",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "178",
+        "props_ids": "0:6;1:1",
+        "props_names": "粉百合 人棉短袖睡裙;L",
+        "sale_count": "3"
+      },
+      {
+        "skuid": "4775224922222",
+        "specid": "f8559072c72d3c37843d682ab1cbd0ca",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "0",
+        "props_ids": "0:7;1:1",
+        "props_names": "灰玉兰 人棉短袖睡裙;L",
+        "sale_count": "5"
+      },
+      {
+        "skuid": "4775224922216",
+        "specid": "e522b8c42cc999656f586986bdba26f2",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8103",
+        "props_ids": "0:4;1:1",
+        "props_names": "如意花 人棉短袖睡裙;L",
+        "sale_count": "24"
+      },
+      {
+        "skuid": "4775224922219",
+        "specid": "5c1e5f62920b4d0d2bf82f796605871b",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "181",
+        "props_ids": "0:6;1:0",
+        "props_names": "粉百合 人棉短袖睡裙;M",
+        "sale_count": "1"
+      },
+      {
+        "skuid": "4775224922215",
+        "specid": "c0ac64c7037625fdf9c882fdd99d9d9b",
+        "sale_price": "35.00",
+        "origin_price": "35.00",
+        "stock": "8136",
+        "props_ids": "0:4;1:0",
+        "props_names": "如意花 人棉短袖睡裙;M",
+        "sale_count": "23"
+      }
+    ],
+    "is_sold_out": false,
+    "stock": 85975,
+    "promotions": [
+      {
+        "type": "MIX_WHOLESALE",
+        "title": "1件混批",
+        "content": "本店部分商品满1元或1件可混批采购",
+        "end_time": null,
+        "type_name": "混批",
+        "start_time": null,
+        "promotion_id": ""
+      }
+    ]
+  }
+}

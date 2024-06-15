@@ -7,7 +7,6 @@
 
 import AppKit
 
-
 // 1
 let app = NSApplication.shared
 let delegate = AppDelegate()
