@@ -15,14 +15,14 @@ final class SizeCreationView: NSView {
     // MARK: - Private properties
 
     private let stackView: NSStackView = .init()
-    private let sizes: [Size]
+    private let sizesInfo: [SizeInfo]
     private var stackViews: [SizeStackView] = []
     private let createSizeDataButton: NSButton = .init()
 
     // MARK: - Initialisers
 
-    init(sizes: [Size]) {
-        self.sizes = sizes
+    init(sizes: [SizeInfo]) {
+        self.sizesInfo = sizes
         super.init(frame: .zero)
         wantsLayer = true
         setupView()
@@ -62,8 +62,8 @@ private extension SizeCreationView {
         stackView.spacing = 20
         stackView.distribution = .fillEqually
         stackView.alignment = .leading
-        for size in self.sizes {
-            let stack: SizeStackView = .init(size: size.value)
+        for sizeInfo in self.sizesInfo {
+            let stack: SizeStackView = .init(sizeInfo: sizeInfo)
             stackView.addArrangedSubview(stack)
             stackViews.append(stack)
             stack.layout {

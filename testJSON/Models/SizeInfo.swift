@@ -1,14 +1,36 @@
 //
-//  Size.swift
+//  SizeInfo.swift
 //  testJSON
 //
-//  Created by oleh yeroshkin on 13.06.2024.
+//  Created by oleh yeroshkin on 18.06.2024.
 //
 
 import Foundation
 
+struct SizeInfo {
+    let sizeNameChin: String
+    let sizeLetter: SizeLetter
+    var sizeNameEng: String?
 
-enum Size: Int {
+    init(sizeChinese: String) {
+        self.sizeNameChin = sizeChinese
+        self.sizeLetter = SizeInfo.findSize(in: sizeChinese)
+        self.sizeNameEng = SizeLetter.getEnum(from: sizeChinese).value
+
+    }
+
+    static func findSize(in chineseString: String) -> SizeLetter {
+        // Iterate over reversed allCases to check from longest to shortest
+        for size in SizeLetter.allCases.reversed() {
+            if chineseString.contains(size.value) {
+                return size
+            }
+        }
+        return .oneSize
+    }
+}
+
+enum SizeLetter: Int, CaseIterable {
     case S = 1
     case M = 2
     case L = 3

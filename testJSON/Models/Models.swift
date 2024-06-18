@@ -6,8 +6,22 @@ struct ItemType {
     let quantity: Int
     let color: String
     let colorEng: String
-    let size: String
-    let sizeEnum: Size
+    let sizeInfo: SizeInfo
+
+    static func getUniqueSizeInfos(from itemTypes: [ItemType]) -> [SizeInfo] {
+        var uniqueSizeLetters = Set<SizeLetter>()
+        var uniqueSizeInfos = [SizeInfo]()
+
+        for item in itemTypes {
+            let sizeLetter = item.sizeInfo.sizeLetter
+            if !uniqueSizeLetters.contains(sizeLetter) {
+                uniqueSizeLetters.insert(sizeLetter)
+                uniqueSizeInfos.append(item.sizeInfo)
+            }
+        }
+
+        return uniqueSizeInfos
+    }
 }
 
 struct DeliveryInfo: Codable {
@@ -23,8 +37,7 @@ struct Model {
 
     let colorChina: String
     let colorEng: String
-    let size: String
-    let sizeEnum: Size
+    let sizeInfo: SizeInfo
     let price: String
 
     let quantity: Int

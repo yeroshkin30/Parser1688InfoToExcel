@@ -67,7 +67,7 @@ struct DataModel: Codable {
             }
         }
 
-        print("ItemPhotosByColor created")
+        print("ItemPhotosByColor created. Total: \(colorPhotos.count)")
 
         return colorPhotos
     }
@@ -79,16 +79,14 @@ struct DataModel: Codable {
             let itemsAmount = dictionari[Keys.itemAmount.rawValue] ?? "No amount"
 
             let propNames = dictionari[Keys.propNames.rawValue] ?? "No prop names"
-            let (color, size) = separateSizeFromColor(from: propNames)
-            let sizeEnum = Size.getEnum(from: size)
+            let (color, sizeChinese) = separateSizeFromColor(from: propNames)
             let colorEng = getColorNameEng(from: color)
 
             itemsBySizeAndColor.append(ItemType(
                 quantity: Int(itemsAmount) ?? 1121231231231231,
                 color: color,
                 colorEng: colorEng.colorNameEng,
-                size: size,
-                sizeEnum: sizeEnum
+                sizeInfo: .init(sizeChinese: sizeChinese)
             ))
         }
 
@@ -118,7 +116,6 @@ struct DataModel: Codable {
         return ColorNameEng.noName
     }
 }
-
 
 // Define the structures for the JSON model
 struct SKUProps: Codable {

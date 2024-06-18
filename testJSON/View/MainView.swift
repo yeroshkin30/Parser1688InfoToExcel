@@ -34,9 +34,9 @@ final class MainView: NSView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupSizeCreationView(with sizes: [Size]) {
+    func setupSizeCreationView(with sizeInfo: [SizeInfo]) {
         sizeCreationView?.removeFromSuperview()
-        sizeCreationView = .init(sizes: sizes)
+        sizeCreationView = .init(sizes: sizeInfo)
         sizeCreationView?.onSizeDataCreated = { [unowned self] sizeData in
             onEvent?(.sizeButtonWasTaped(sizeData))
         }

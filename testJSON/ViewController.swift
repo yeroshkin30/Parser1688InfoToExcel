@@ -13,7 +13,7 @@ final class ViewController: NSViewController {
     private let networkController: NetworkController = .init()
     private let xlCreator: XLCreator = .init()
     var convertedModel: DataModelConverted?
-    var sizeData: [SizeData] = []
+    var sizeData: [SizeData] = [.init(sizeInfo: .init(sizeChinese: "oneSize"), productLength: nil, shoulderLength: nil, bust: nil, waist: nil, hips: nil, sleeve: nil)]
     // MARK: - Private properties
 
 
@@ -33,8 +33,6 @@ final class ViewController: NSViewController {
 
 private extension ViewController {
     func setup() {
-//        setupTextField()
-//        setupButton()
         setupMainView()
         setupModels()
     }
@@ -47,9 +45,8 @@ private extension ViewController {
                     do {
                         convertedModel =  try await getModels(from: link)
                         if let convertedModel {
-                            let allSizes: Set<Size> = Set(convertedModel.itemTypes.map { $0.sizeEnum })
-                            let sizes = Array(allSizes).sorted { $0.rawValue < $1.rawValue }
-                            mainView.setupSizeCreationView(with: sizes)
+                            let sizeInfos: [SizeInfo] = ItemType.getUniqueSizeInfos(from: convertedModel.itemTypes)
+                            mainView.setupSizeCreationView(with: sizeInfos)
                         }
                     }
                     catch {
@@ -92,31 +89,31 @@ private extension ViewController {
 
     func setupModels() {
 
-        guard let path = Bundle.main.path(forResource: "itemJSON", ofType: "json") else { return }
-
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let decoder = JSONDecoder()
-            let mainModel = try decoder.decode(MainModel.self, from: data)
-            Task {
-                let converted = try await mainModel.data.convert(from: mainModel.data)
-                let allSizes: Set<Size> = Set(converted.itemTypes.map { $0.sizeEnum })
-                let sizes = Array(allSizes).sorted { $0.rawValue < $1.rawValue }
-//                mainView.setupSizeCreationView(with: sizes) { [weak self] sizeData in
-//                    guard let self else { return }
-//                    let models = createItemModels(from: converted, sizesData: sizeData)
-//                    xlCreator.createExcelFile(
-//                        with: models,
-//                        images: converted.images,
-//                        imageByColor: converted.imtePhotoByColor,
-//                        id: String(converted.id)
-//                    )
-//                }
-            }
-        } catch {
-            print("Error in \(#function) - \(error.localizedDescription)")
-            return
-        }
+//        guard let path = Bundle.main.path(forResource: "itemJSON", ofType: "json") else { return }
+//
+//        do {
+//            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//            let decoder = JSONDecoder()
+//            let mainModel = try decoder.decode(MainModel.self, from: data)
+//            Task {
+//                let converted = try await mainModel.data.convert(from: mainModel.data)
+//                let allSizes: Set<SizeLetter> = Set(converted.itemTypes.map { $0.sizeEnum })
+//                let sizes = Array(allSizes).sorted { $0.rawValue < $1.rawValue }
+////                mainView.setupSizeCreationView(with: sizes) { [weak self] sizeData in
+////                    guard let self else { return }
+////                    let models = createItemModels(from: converted, sizesData: sizeData)
+////                    xlCreator.createExcelFile(
+////                        with: models,
+////                        images: converted.images,
+////                        imageByColor: converted.imtePhotoByColor,
+////                        id: String(converted.id)
+////                    )
+////                }
+//            }
+//        } catch {
+//            print("Error in \(#function) - \(error.localizedDescription)")
+//            return
+//        }
     }
 
 
@@ -151,17 +148,16 @@ func createItemModels(from data: DataModelConverted, sizesData: [SizeData]) -> [
     var models: [Model] = []
 
     for itemType in data.itemTypes {
-        let sizeData = sizesData.first { $0.sizeValue == itemType.sizeEnum.value }!
+        let sizeData = sizesData.first { $0.sizeInfo.sizeLetter == itemType.sizeInfo.sizeLetter }!
         let model = Model(
             title: data.title,
             images: data.images,
             article: data.productProperties.article ?? String(data.id),
-            sku: "\(data.productProperties.article ?? String(data.id)) + color",
+            sku: "\(data.productProperties.article ?? String(data.id)) \(itemType.colorEng)",
             productName: "need name",
             colorChina: itemType.color,
             colorEng: itemType.colorEng,
-            size: itemType.size,
-            sizeEnum: itemType.sizeEnum,
+            sizeInfo: itemType.sizeInfo,
             price: data.price,
             quantity: itemType.quantity,
             productLength: sizeData.productLength,

@@ -7,16 +7,6 @@
 
 import AppKit
 
-struct SizeData {
-    let sizeValue: String
-    let productLength: String?
-    let shoulderLength: String?
-    let bust: String?
-    let waist: String?
-    let hips: String?
-    let sleeve: String?
-}
-
 final class SizeStackView: NSStackView {
 
     // MARK: - Private properties
@@ -40,10 +30,10 @@ final class SizeStackView: NSStackView {
 
     // MARK: - Initialisers
 
-    private let sizeValue: String
+    private let sizeInfo: SizeInfo
 
-    init(size: String) {
-        self.sizeValue = size
+    init(sizeInfo: SizeInfo) {
+        self.sizeInfo = sizeInfo
         super.init(frame: .zero)
         wantsLayer = true
         setupView()
@@ -54,13 +44,13 @@ final class SizeStackView: NSStackView {
     }
 
     func getSizeData() -> SizeData {
-        .init( sizeValue: label.stringValue,
-               productLength: productLength.stringValue,
-               shoulderLength: shoulderLength.stringValue,
-               bust: bust.stringValue,
-               waist: waist.stringValue,
-               hips: hips.stringValue,
-               sleeve: sleeve.stringValue
+        .init(sizeInfo: sizeInfo,
+              productLength: productLength.stringValue,
+              shoulderLength: shoulderLength.stringValue,
+              bust: bust.stringValue,
+              waist: waist.stringValue,
+              hips: hips.stringValue,
+              sleeve: sleeve.stringValue
         )
     }
 }
@@ -83,7 +73,7 @@ private extension SizeStackView {
             $0.backgroundColor = .lightGray.withAlphaComponent(0.3)
             $0.alignment = .center
         }
-        label.stringValue = sizeValue
+        label.stringValue = sizeInfo.sizeNameEng ?? sizeInfo.sizeNameChin
         label.isEditable = false
         label.isBezeled = false
         label.drawsBackground = false

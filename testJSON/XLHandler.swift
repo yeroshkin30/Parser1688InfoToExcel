@@ -7,7 +7,7 @@ class XLCreator {
     func createExcelFile(with itemModels: [Model], images: [NSImage], imageByColor: [ItemPhotoByColor], id: String) {
         let items = itemModels.sorted(by: { (model1, model2) -> Bool in
             if model1.colorChina == model2.colorChina {
-                return model1.sizeEnum.rawValue < model2.sizeEnum.rawValue
+                return model1.sizeInfo.sizeLetter.rawValue < model2.sizeInfo.sizeLetter.rawValue
             }
             return model1.colorChina < model2.colorChina
         })
@@ -59,7 +59,7 @@ class XLCreator {
             cell.value = .text(item.colorEng)
 
             cell = addCell(to: sheet, row: row, col: 9)
-            cell.value = .text(item.size)
+            cell.value = .text(item.sizeInfo.sizeNameEng ?? item.sizeInfo.sizeNameChin)
 
             cell = addCell(to: sheet, row: row, col: 10)
             cell.value = .integer(item.quantity)
@@ -80,13 +80,13 @@ class XLCreator {
             cell.value = .text(item.waistSize ?? "")
 
             cell = addCell(to: sheet, row: row, col: 16)
-            cell.value = .text(item.hips ?? "")
+            cell.value = .text(String(item.weight)) // !!!
 
             cell = addCell(to: sheet, row: row, col: 16)
             cell.value = .text(item.sleevelength ?? "")
 
             cell = addCell(to: sheet, row: row, col: 18)
-            cell.value = .text(String(item.weight))
+            cell.value = .text("") // !!!
 
             cell = addCell(to: sheet, row: row, col: 20)
             cell.value = .text(String(item.fabric))

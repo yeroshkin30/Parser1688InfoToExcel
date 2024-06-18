@@ -3,13 +3,23 @@ import AppKit
 
 class NetworkController {
 
-    let session = URLSession.shared
-
-    let headers = [
+    private let session: URLSession
+    private let headers = [
         "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
         "x-rapidapi-host": "1688-product2.p.rapidapi.com"
     ]
 
+    init() {
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = URLCache(
+            memoryCapacity: 50 * 1024 * 1024,
+            diskCapacity: 150 * 1024 * 1024,
+            diskPath: "customCache"
+        )
+        configuration.requestCachePolicy = .useProtocolCachePolicy
+
+        self.session =  URLSession(configuration: configuration)
+    }
 
     func getMainModel(for id: String) async throws -> MainModel {
         var urlRequest = URLRequest(url: URL(string: "https://1688-product2.p.rapidapi.com/1688/v2/item_detail?item_id=\(String(id))")!)
@@ -18,12 +28,17 @@ class NetworkController {
         urlRequest.timeoutInterval = 10
         urlRequest.cachePolicy = .useProtocolCachePolicy
 
-
         let (data, response) = try await session.data(for: urlRequest)
 
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw Errors.dataNotFound
         }
+
+        // Check if the response was from cache
+               if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
+                   print("Cache Status: \(userInfo)")
+               }
+
         let mainModel = try JSONDecoder().decode(MainModel.self, from: data)
 
         return mainModel
