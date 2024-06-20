@@ -4,8 +4,14 @@ import AppKit
 class NetworkController {
 
     private let session: URLSession
-    private let headers = [
-        "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
+//    private let headers = [
+//        "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
+//        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
+//    ]
+
+    // Jurist acc
+    let headers = [
+        "x-rapidapi-key": "6c9d706434mshfee7aa859ff0bdbp1e5837jsn8156908f1c9a",
         "x-rapidapi-host": "1688-product2.p.rapidapi.com"
     ]
 

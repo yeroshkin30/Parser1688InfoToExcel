@@ -14,7 +14,6 @@ class XLCreator {
         let book = XWorkBook()
         // Create a new sheet
         let sheet = setupSheet(book: book)
-
         // Add header row
         var cell = createHeaderRow(for: sheet)
         cell = createSecondHeader(for: sheet)
@@ -23,15 +22,17 @@ class XLCreator {
         var row = 3
         var currentColor: String = items.first!.colorChina
         var needColor = true
+
+
         for item in items {
-            cell = addCell(to: sheet, row: row, col: 1, width: 300)
-            cell.value = .text("Name")
+            cell = addCell(to: sheet, row: row, col: .brand, width: 300)
+            cell.value = .text(id)
 
             if currentColor == item.colorChina {
                 let image = imageByColor.first { $0.color == currentColor }!.image
                 if needColor {
-                    let imageCellValue: XImageCell = XImageCell(key: XImages.append(with: image)!, size: CGSize(width: 75, height: 75))
-                    cell = addCell(to: sheet, row: row, col: 2)
+                    let imageCellValue: XImageCell = XImageCell(key: XImages.append(with: image)!, size: CGSize(width: 150, height: 150))
+                    cell = addCell(to: sheet, row: row, col: .image)
                     cell.value = .icon(imageCellValue)
                     needColor = false
                 }
@@ -39,58 +40,82 @@ class XLCreator {
                 currentColor = item.colorChina
                 let image = imageByColor.first { $0.color == currentColor }!.image
                 let imageCellValue: XImageCell = XImageCell(key: XImages.append(with: image)!, size: CGSize(width: 75, height: 75))
-                cell = addCell(to: sheet, row: row, col: 2)
+                cell = addCell(to: sheet, row: row, col: .image)
                 cell.value = .icon(imageCellValue)
             }
 
-            cell = addCell(to: sheet, row: row, col: 3)
+            cell = addCell(to: sheet, row: row, col: .article)
             cell.value = .text(item.article)
 
-            cell = addCell(to: sheet, row: row, col: 4)
+            cell = addCell(to: sheet, row: row, col: .sku)
             cell.value = .text(item.sku ?? "NOSKU")
 
-            cell = addCell(to: sheet, row: row, col: 5)
+            cell = addCell(to: sheet, row: row, col: .itemName)
             cell.value = .text(item.title ?? "No title")
 
-            cell = addCell(to: sheet, row: row, col: 7)
+            cell = addCell(to: sheet, row: row, col: .colorChinese)
             cell.value = .text(item.colorChina)
 
-            cell = addCell(to: sheet, row: row, col: 8)
+            cell = addCell(to: sheet, row: row, col: .colorEng)
             cell.value = .text(item.colorEng)
 
-            cell = addCell(to: sheet, row: row, col: 9)
+            cell = addCell(to: sheet, row: row, col: .size)
             cell.value = .text(item.sizeInfo.sizeNameEng ?? item.sizeInfo.sizeNameChin)
 
-            cell = addCell(to: sheet, row: row, col: 10)
+            cell = addCell(to: sheet, row: row, col: .quantity)
             cell.value = .integer(item.quantity)
 
-            cell = addCell(to: sheet, row: row, col: 11)
+            cell = addCell(to: sheet, row: row, col: .price)
             cell.value = .text(item.price)
             
-            cell = addCell(to: sheet, row: row, col: 12)
-            cell.value = .text(item.productLength ?? "")
+//            cell = addCell(to: sheet, row: row, col: 12)
+//            cell.value = .text(item.productLength ?? "")
+//
+//            cell = addCell(to: sheet, row: row, col: 13)
+//            cell.value = .text(item.shoulders ?? "")
+//
+//            cell = addCell(to: sheet, row: row, col: 14)
+//            cell.value = .text(item.bustSize ?? "")
+//
+//            cell = addCell(to: sheet, row: row, col: 15)
+//            cell.value = .text(item.waistSize ?? "")
 
-            cell = addCell(to: sheet, row: row, col: 13)
-            cell.value = .text(item.shoulders ?? "")
+            cell = addCell(to: sheet, row: row, col: .weight)
+            cell.value = .float(item.weight) // !!!
 
-            cell = addCell(to: sheet, row: row, col: 14)
-            cell.value = .text(item.bustSize ?? "")
+//            cell = addCell(to: sheet, row: row, col: 16)
+//            cell.value = .text(item.sleevelength ?? "")
+//
+//            cell = addCell(to: sheet, row: row, col: 18)
+//            cell.value = .text(String(item.weight)) // !!!
+//
+//            cell = addCell(to: sheet, row: row, col: 20)
+//            cell.value = .text(String(item.fabric))
+            
+            cell = addCell(to: sheet, row: row, col: .link)
+            cell.value = .text(newLink)
 
-            cell = addCell(to: sheet, row: row, col: 15)
-            cell.value = .text(item.waistSize ?? "")
+            row += 1
+        }
 
-            cell = addCell(to: sheet, row: row, col: 16)
-            cell.value = .text(String(item.weight)) // !!!
+        sheet.buildindex()
+        sheet.MergeRect(XRect(1, 11, 7, 1))
 
-            cell = addCell(to: sheet, row: row, col: 16)
-            cell.value = .text(item.sleevelength ?? "")
+        currentColor = items.first!.colorChina
+        row = 3
+        var startRow = 3
+        var finishRow = 3
 
-            cell = addCell(to: sheet, row: row, col: 18)
-            cell.value = .text("") // !!!
-
-            cell = addCell(to: sheet, row: row, col: 20)
-            cell.value = .text(String(item.fabric))
-
+        for (index, item) in items.enumerated() {
+            if currentColor != item.colorChina  {
+                finishRow = row
+                sheet.MergeRect(XRect(startRow, 2, 1, finishRow - startRow))
+                currentColor = item.colorChina
+                startRow = row
+            } else if index == items.count - 1 {
+                finishRow = row + 1
+                sheet.MergeRect(XRect(startRow, 2, 1, finishRow - startRow))
+            }
             row += 1
         }
 
@@ -98,7 +123,7 @@ class XLCreator {
         var fileid = book.save("\(id).xlsx")
         print("<<<File XLSX generated!>>>")
         print("\(fileid)")
-        fileid.removeLast(4)
+        fileid.removeLast(5)
 
         saveImages(id: id, images: images, to: fileid)
         saveImagesByColor(id: id, photoByColors: imageByColor, to: fileid)
@@ -227,6 +252,16 @@ class XLCreator {
 
         return cell
     }
+
+    func addCell(to sheet: XSheet, row: Int, col  name: ColumnName, width: Int? = nil) -> XCell {
+        let cell = sheet.AddCell(XCoords(row: row, col: name.rawValue))
+        cell.alignmentHorizontal = .center
+        if let width {
+            cell.width = width
+        }
+
+        return cell
+    }
 }
 
 
@@ -246,7 +281,8 @@ func saveImagesByColor(id: String, photoByColors: [ItemPhotoByColor], to directo
 
     // Save each image
     for photoByColor in photoByColors {
-        saveImage(to: directoryPath, image: photoByColor.image, id: id, name: photoByColor.color)
+
+        saveImage(to: directoryPath, image: photoByColor.image, id: id, name: photoByColor.colorEng ?? photoByColor.color)
     }
 }
 

@@ -23,7 +23,7 @@ struct ProductProperties {
         }
 
         self.mainFabricComposition = singleDictionary[Props.mainFabricComposition.rawValue]
-        self.article = singleDictionary[Props.articleNumber.rawValue]
+        self.article = singleDictionary[Props.articleNumber.rawValue]?.removeChineseCharacters()
         self.colour = singleDictionary[Props.colour.rawValue]
         self.size = singleDictionary[Props.size.rawValue]
         self.fabricPercent = singleDictionary[Props.fabricPercent.rawValue]
@@ -64,5 +64,16 @@ struct ProductProperties {
         case colour = "颜色"
         case size = "尺码"
         case fabricPercent = "主面料成分的含量"
+    }
+}
+
+
+extension String {
+    func removeChineseCharacters() -> String {
+        let pattern = "[^a-zA-Z0-9\\s-]" // pattern to match non-alphanumeric characters, excluding hyphens and spaces
+        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+        let range = NSRange(location: 0, length: self.utf16.count)
+        let modifiedString = regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "")
+        return modifiedString
     }
 }

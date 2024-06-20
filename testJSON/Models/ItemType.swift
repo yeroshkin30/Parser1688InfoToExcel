@@ -5,23 +5,8 @@ import AppKit
 struct ItemType {
     let quantity: Int
     let color: String
-    let colorEng: String
+    let colorEng: String?
     let sizeInfo: SizeInfo
-
-    static func getUniqueSizeInfos(from itemTypes: [ItemType]) -> [SizeInfo] {
-        var uniqueSizeLetters = Set<SizeLetter>()
-        var uniqueSizeInfos = [SizeInfo]()
-
-        for item in itemTypes {
-            let sizeLetter = item.sizeInfo.sizeLetter
-            if !uniqueSizeLetters.contains(sizeLetter) {
-                uniqueSizeLetters.insert(sizeLetter)
-                uniqueSizeInfos.append(item.sizeInfo)
-            }
-        }
-
-        return uniqueSizeInfos
-    }
 }
 
 struct DeliveryInfo: Codable {

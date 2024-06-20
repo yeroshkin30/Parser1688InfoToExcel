@@ -55,11 +55,12 @@ struct DataModel: Codable {
         for itemWithColor in colorSkus.values {
             if let imageURL = itemWithColor.imageUrl,
                let image = try? await getImage(from: URL(string: imageURL)!) {
-
+                let engColor = getColorNameEng(from: itemWithColor.name)
                 colorPhotos.append(
                     ItemPhotoByColor(
                         color: itemWithColor.name,
-                        image: image
+                        image: image,
+                        colorEng: engColor?.colorNameEng
                     )
                 )
             } else {
@@ -85,7 +86,7 @@ struct DataModel: Codable {
             itemsBySizeAndColor.append(ItemType(
                 quantity: Int(itemsAmount) ?? 1121231231231231,
                 color: color,
-                colorEng: colorEng.colorNameEng,
+                colorEng: colorEng?.colorNameEng,
                 sizeInfo: .init(sizeChinese: sizeChinese)
             ))
         }
@@ -106,14 +107,14 @@ struct DataModel: Codable {
         return (propColor, propSize)
     }
 
-   private func getColorNameEng(from colorNameChinese: String) -> ColorNameEng {
+   private func getColorNameEng(from colorNameChinese: String) -> ColorNameEng? {
         for color in ColorNameEng.allCases {
             if colorNameChinese.contains(color.rawValue) {
                 return color
             }
         }
 
-        return ColorNameEng.noName
+        return nil
     }
 }
 
@@ -158,4 +159,5 @@ struct DataModelConverted {
 struct ItemPhotoByColor {
     let color: String
     let image: NSImage
+    let colorEng: String?
 }

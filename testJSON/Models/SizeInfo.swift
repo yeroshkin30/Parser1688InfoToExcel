@@ -15,7 +15,7 @@ struct SizeInfo {
     init(sizeChinese: String) {
         self.sizeNameChin = sizeChinese
         self.sizeLetter = SizeInfo.findSize(in: sizeChinese)
-        self.sizeNameEng = SizeLetter.getEnum(from: sizeChinese).value
+        self.sizeNameEng = SizeLetter.getEnum(from: sizeChinese)?.value
 
     }
 
@@ -28,6 +28,21 @@ struct SizeInfo {
         }
         return .oneSize
     }
+
+    static func getUniqueSizeInfos(from itemTypes: [ItemType]) -> [SizeInfo] {
+        var uniqueSizeLetters = Set<SizeLetter>()
+        var uniqueSizeInfos = [SizeInfo]()
+
+        for item in itemTypes {
+            let sizeLetter = item.sizeInfo.sizeLetter
+            if !uniqueSizeLetters.contains(sizeLetter) {
+                uniqueSizeLetters.insert(sizeLetter)
+                uniqueSizeInfos.append(item.sizeInfo)
+            }
+        }
+
+        return uniqueSizeInfos
+    }
 }
 
 enum SizeLetter: Int, CaseIterable {
@@ -36,10 +51,14 @@ enum SizeLetter: Int, CaseIterable {
     case L = 3
     case XL = 4
     case XXL = 5
-    case XXXL = 6
-    case oneSize = 7
+    case XL2 = 6
+    case XXXL = 7
+    case XL3 = 8
+    case XXXXL = 9
+    case XL4 = 10
+    case oneSize = 11
 
-    static func getEnum(from size: String) -> Self {
+    static func getEnum(from size: String) -> Self? {
         switch size {
         case "S":
             return .S
@@ -51,12 +70,20 @@ enum SizeLetter: Int, CaseIterable {
             return .XL
         case "XXL":
             return .XXL
+        case "2XL":
+            return .XL2
         case "XXXL":
             return .XXXL
+        case "3XL":
+            return .XL3
+        case "XXXXL":
+            return .XXXXL
+        case "4XL":
+            return .XL4
         case "oneSize":
-            return .oneSize
+            return nil
         default:
-            return .oneSize
+            return nil
         }
     }
 
@@ -76,6 +103,14 @@ enum SizeLetter: Int, CaseIterable {
             return "XXXL"
         case .oneSize:
             return "oneSize"
+        case .XL2:
+            return "2XL"
+        case .XL3:
+            return "3XL"
+        case .XXXXL:
+            return "XXXXL"
+        case .XL4:
+            return "4XL"
         }
     }
 }

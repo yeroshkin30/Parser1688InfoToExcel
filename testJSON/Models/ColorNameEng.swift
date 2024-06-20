@@ -9,7 +9,7 @@ import Foundation
 
 
 enum ColorNameEng: String, CaseIterable {
-    case  black = "黑色"
+    case black = "黑色"
     case black2 = "黑颜色"
 
     case  yellow = "黄色"
@@ -30,8 +30,12 @@ enum ColorNameEng: String, CaseIterable {
     case creamyWhite = "米白"
     case apricot = "杏色"
     case noName = "No name"
+
+    case white = "白色"
     case milkyWhite = "奶白"
     case coffeeWhite = "奶咖色"
+
+    case gray = "灰色"
     case lightPurple = "淡紫"
     case mingGreen = "薄荷绿"
     case champane = "香槟"
@@ -73,6 +77,10 @@ enum ColorNameEng: String, CaseIterable {
             return "CreamyWhite"
         case .apricot:
             return "Apricot"
+        case .white:
+            return "White"
+        case .gray:
+            return "Gray"
         case .milkyWhite:
             return "Milky white"
         case .coffeeWhite:
