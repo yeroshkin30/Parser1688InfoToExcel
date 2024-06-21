@@ -16,10 +16,7 @@ struct BagsPropertiesView: View {
             Form {
                 CustomTextField(inputText: $bagEditData.bagSize, title: "Bag size", value: "No data")
                 CustomTextField(inputText: $bagEditData.fabric, title: "Fabric:", value: bagEditData.fabricChinese)
-                CustomTextField(inputText: $bagEditData.straps, title: "Zipper", value: bagEditData.strapsData)
-            }
-            Button { } label: {
-                Text("Create bag data")
+                CustomTextField(inputText: $bagEditData.straps, title: "Straps", value: bagEditData.strapsData)
             }
         }
         .padding()

@@ -113,11 +113,15 @@ func getImages(from urls: [URL]) async throws -> [NSImage] {
     return images
 }
 
-func getImagesData(from urls: [URL]) async throws -> [Data] {
+func getImagesData(from urls: [URL]) async -> [Data] {
     var imagesData: [Data] = []
-    for url in urls {
-        let imageData = try await getImageData(from: url)
-        imagesData.append(imageData)
+    do {
+        for url in urls {
+            let imageData = try await getImageData(from: url)
+            imagesData.append(imageData)
+        }
+    } catch {
+        print(error)
     }
 
     return imagesData

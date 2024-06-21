@@ -9,7 +9,7 @@ import Foundation
 
 class ModelConverter {
     func convert(from data: DataModel) async throws -> DataModelConverted {
-        let imagesData = try await getImagesData(from: data.main_imgs)
+        let imagesData = await getImagesData(from: data.main_imgs)
         let productProps: ProductProperties = .init(prop: data.product_props)
         let itemPhotosByColor: [PhotoByColor] = await getPhotosByColor(from: data.sku_props)
         let itemsByColor: [ItemByColor] = transformPropertiesByItem(from: data.skus, photosByColor: itemPhotosByColor)
@@ -59,6 +59,7 @@ private extension ModelConverter {
         }
 
         let itemsByColor = convertToItemsByColor(from: itemModels, photosByColor: photosByColor)
+        print("ItemsByColor created. Total: \(itemsByColor.count)")
 
         return itemsByColor
     }
@@ -112,7 +113,7 @@ private extension ModelConverter {
 
             return PhotoByColor(colorChinese: itemWithColor.name, imageData: imageData)
         } else {
-            print("Cant get and image from URL photo by color")
+            print("Cant get image from URL photo by color")
             return nil
         }
     }

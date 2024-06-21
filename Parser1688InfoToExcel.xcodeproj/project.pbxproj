@@ -32,7 +32,7 @@
 		4F40FCB92C167D0200AEB662 /* ProductProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCB82C167D0200AEB662 /* ProductProperties.swift */; };
 		4F40FCBB2C167D2600AEB662 /* itemJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FCBA2C167D2600AEB662 /* itemJSON.json */; };
 		4F40FCBD2C167D5900AEB662 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCBC2C167D5900AEB662 /* ItemType.swift */; };
-		4F6032962C1741130074FCD5 /* XLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6032952C1741130074FCD5 /* XLHandler.swift */; };
+		4F6032962C1741130074FCD5 /* XLCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6032952C1741130074FCD5 /* XLCreator.swift */; };
 		4F914B0F2C24680A00821CCA /* SizePropertiesCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B0E2C24680A00821CCA /* SizePropertiesCreationView.swift */; };
 		4F914B112C2497CC00821CCA /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B102C2497CC00821CCA /* Extension+String.swift */; };
 		4F914B132C24AB0C00821CCA /* ItemByColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B122C24AB0C00821CCA /* ItemByColor.swift */; };
@@ -87,7 +87,7 @@
 		4F40FCB82C167D0200AEB662 /* ProductProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductProperties.swift; sourceTree = "<group>"; };
 		4F40FCBA2C167D2600AEB662 /* itemJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itemJSON.json; sourceTree = "<group>"; };
 		4F40FCBC2C167D5900AEB662 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
-		4F6032952C1741130074FCD5 /* XLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLHandler.swift; sourceTree = "<group>"; };
+		4F6032952C1741130074FCD5 /* XLCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLCreator.swift; sourceTree = "<group>"; };
 		4F914B0E2C24680A00821CCA /* SizePropertiesCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePropertiesCreationView.swift; sourceTree = "<group>"; };
 		4F914B102C2497CC00821CCA /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		4F914B122C24AB0C00821CCA /* ItemByColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemByColor.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		4F29887A2C2436B500B2746F /* XLCreator */ = {
 			isa = PBXGroup;
 			children = (
-				4F6032952C1741130074FCD5 /* XLHandler.swift */,
+				4F6032952C1741130074FCD5 /* XLCreator.swift */,
 				4F29887B2C2436CE00B2746F /* ColumnName.swift */,
 			);
 			path = XLCreator;
@@ -224,8 +224,8 @@
 			children = (
 				4F2988B42C2446C800B2746F /* App.swift */,
 				4F2988B62C2446EA00B2746F /* MainView.swift */,
-				4F3F45F82C25F4CC0079C693 /* Controllers */,
 				4F3F45F92C25F4D90079C693 /* Views */,
+				4F3F45F82C25F4CC0079C693 /* Controllers */,
 				4F3F45F72C25F4AB0079C693 /* OldVIews */,
 				4F2987C02C1B8A8400B2746F /* Models */,
 				4F3F45FD2C25F55A0079C693 /* Extensions */,
@@ -403,7 +403,7 @@
 			files = (
 				4F914B172C24BE2900821CCA /* DataModelConverted.swift in Sources */,
 				4F2987BF2C1B87B700B2746F /* ColorNameEng.swift in Sources */,
-				4F6032962C1741130074FCD5 /* XLHandler.swift in Sources */,
+				4F6032962C1741130074FCD5 /* XLCreator.swift in Sources */,
 				4F40FCB92C167D0200AEB662 /* ProductProperties.swift in Sources */,
 				4F914B1E2C25C04500821CCA /* DataController.swift in Sources */,
 				4F2987C42C1BAFB400B2746F /* LayoutDSL.swift in Sources */,

@@ -37,7 +37,9 @@ class XLCreator {
                 cell = addCell(to: sheet, row: row, col: .colorEng)
                 cell.value = .text(item.color.english?.colorNameEng ?? "")
 
-                //            cell = addCell(to: sheet, row: row, col: .size)
+                cell = addCell(to: sheet, row: row, col: .size)
+                cell.value = .text(model.bagSize)
+                /// For clothes
                 //            cell.value = .text(model.sizeInfo.sizeNameEng ?? model.sizeInfo.sizeNameChin)
 
                 cell = addCell(to: sheet, row: row, col: .quantity)
@@ -78,6 +80,8 @@ class XLCreator {
                 cell = addCell(to: sheet, row: row, col: .fabric)
                 cell.value = .text(model.fabric)
 
+                cell = addCell(to: sheet, row: row, col: .straps)
+                cell.value = .text(model.strap)
 
                 cell = addCell(to: sheet, row: row, col: .link)
                 cell.value = .text(currentLink)
