@@ -21,5 +21,10 @@ enum ColumnName: Int {
     case price = 11
     case weight = 13
 
+    //bags
+    case bagSize = 14
+    case compositionChinese = 15
+    case fabric = 16
+
     case link = 21
 }

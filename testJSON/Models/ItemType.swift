@@ -36,20 +36,21 @@ struct Model {
     let fabric: String
 }
 
-struct Model2 {
+struct BagModel {
     let title: String?
-    let image: NSImage
+    let images: [Data]
     let article: String
     let aritcleAndColorSku: String?
     let productName: String? // dress
     let price: String
 
-    let colorInfo: ColorInfo
-    let sizeData: SizeData
+    let itemsByColor: [ItemByColor]
 
-    let quantity: Int
     let weight: Float
+    let compositionChinese: String
+    let bagSize: String
     let fabric: String
+    let strap: String
 }
 
 

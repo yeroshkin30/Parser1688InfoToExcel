@@ -10,6 +10,9 @@ struct ProductProperties {
     var fabricValueForTable: String?
     var fabricValueChinise: String?
 
+    var fabricForBags: String?
+    var straps: String?
+
 
     init(prop: [[String : String]]) {
         var singleDictionary: [String: String] = [:]
@@ -27,6 +30,10 @@ struct ProductProperties {
         self.colour = singleDictionary[Props.colour.rawValue]
         self.sizesChinese = singleDictionary[Props.size.rawValue]?.components(separatedBy: ",")
         self.fabricPercent = singleDictionary[Props.fabricPercent.rawValue]
+
+        self.fabricForBags = singleDictionary[Props.fabricBag.rawValue]
+        self.straps = singleDictionary[Props.straps.rawValue]
+
 
         let numberSring = extractNumber(from: fabricPercent) ?? ""
         self.fabricValueForTable = numberSring + (mainFabricComposition ?? "No fabric")
@@ -65,6 +72,8 @@ struct ProductProperties {
         case colour = "颜色"
         case size = "尺码"
         case fabricPercent = "主面料成分的含量"
+        case fabricBag = "材质"  // for bags
+        case straps = "肩带根数"  // for bags
     }
 }
 

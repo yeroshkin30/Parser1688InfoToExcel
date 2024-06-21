@@ -13,43 +13,49 @@ struct BagsPropertiesView: View {
     var body: some View {
         
         VStack(spacing: 15) {
-            CustomTextField(inputText: $bagEditData.bagSize, title: "Bag size")
-            CustomTextField(inputText: $bagEditData.fabric, title: "Fabric:")
-            CustomTextField(inputText: $bagEditData.zippers, title: "Buttons, zippers, pockets: ")
+            Form {
+                CustomTextField(inputText: $bagEditData.bagSize, title: "Bag size", value: "No data")
+                CustomTextField(inputText: $bagEditData.fabric, title: "Fabric:", value: bagEditData.fabricChinese)
+                CustomTextField(inputText: $bagEditData.straps, title: "Zipper", value: bagEditData.strapsData)
+            }
             Button { } label: {
                 Text("Create bag data")
             }
         }
         .padding()
-//        .background(.gray)
         .frame(width: 400)
     }
 }
 
 
 
-struct BagEditData: Identifiable {
-    let id: UUID = .init()
-    var bagSize: String = ""
-    var fabric: String = ""
-    var zippers: String = ""
-}
-
 struct CustomTextField: View {
     @Binding var inputText: String
     let title: String
+    let value: String?
 
     var body: some View {
         VStack {
-            Text(title)
-                .font(.system(size: 16))
-                .foregroundStyle(.black)
-            TextField(title, text: $inputText)
+                Text(value ?? "")
+                    .font(.system(size: 16))
+                    .foregroundStyle(.black)
+                TextField(text: $inputText, prompt: Text(title)) {
+                    Text(title)
+                }
                 .textFieldStyle(.roundedBorder)
         }
         .padding()
         .background(.gray.opacity(0.3), in: RoundedRectangle(cornerRadius: 10))
     }
+}
+
+struct BagEditData: Identifiable {
+    let id: UUID = .init()
+    var fabricChinese: String? = nil
+    var strapsData: String? = nil
+    var bagSize: String = ""
+    var fabric: String = ""
+    var straps: String = ""
 }
 
 
