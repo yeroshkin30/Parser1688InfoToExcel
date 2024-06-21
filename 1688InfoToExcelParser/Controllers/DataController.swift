@@ -18,7 +18,7 @@ class DataController {
 
     private let networkController: NetworkController = .init()
     private let xlCreator: XLCreator = .init()
-    private let modelHandler: ModelHandler = .init()
+    private let modelHandler: ModelConverter = .init()
 
     var convertedModel: DataModelConverted?
     var bagData: BagEditData = .init()

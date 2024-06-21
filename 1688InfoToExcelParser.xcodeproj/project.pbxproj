@@ -15,17 +15,14 @@
 		4F2987BB2C1A6A3A00B2746F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987BA2C1A6A3A00B2746F /* DataModel.swift */; };
 		4F2987BD2C1B834800B2746F /* TEST JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987BC2C1B834800B2746F /* TEST JSON.swift */; };
 		4F2987BF2C1B87B700B2746F /* ColorNameEng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987BE2C1B87B700B2746F /* ColorNameEng.swift */; };
-		4F2987C22C1BAC3200B2746F /* SizeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987C12C1BAC3200B2746F /* SizeStackView.swift */; };
 		4F2987C42C1BAFB400B2746F /* LayoutDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987C32C1BAFB400B2746F /* LayoutDSL.swift */; };
-		4F2987C62C1BB5E400B2746F /* SizeDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987C52C1BB5E400B2746F /* SizeDataStackView.swift */; };
-		4F2987C82C1C543600B2746F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987C72C1C543600B2746F /* MainView.swift */; };
 		4F2988502C21B3CA00B2746F /* SizeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29884F2C21B3CA00B2746F /* SizeInfo.swift */; };
 		4F2988522C21D0F600B2746F /* SizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2988512C21D0F600B2746F /* SizeData.swift */; };
 		4F29887C2C2436CE00B2746F /* ColumnName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29887B2C2436CE00B2746F /* ColumnName.swift */; };
 		4F2988B52C2446C800B2746F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2988B42C2446C800B2746F /* App.swift */; };
-		4F2988B72C2446EA00B2746F /* MainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2988B62C2446EA00B2746F /* MainViews.swift */; };
+		4F2988B72C2446EA00B2746F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2988B62C2446EA00B2746F /* MainView.swift */; };
 		4F2988B92C24540200B2746F /* GetLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2988B82C24540200B2746F /* GetLinkView.swift */; };
-		4F40FC8C2C167BBE00AEB662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */; };
+		4F3F45FB2C25F5010079C693 /* BagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F45FA2C25F5010079C693 /* BagModel.swift */; };
 		4F40FC8E2C167BBE00AEB662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC8D2C167BBE00AEB662 /* ViewController.swift */; };
 		4F40FC902C167BBF00AEB662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */; };
 		4F40FC9E2C167BBF00AEB662 /* testJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FC9D2C167BBF00AEB662 /* testJSONTests.swift */; };
@@ -36,13 +33,12 @@
 		4F40FCBB2C167D2600AEB662 /* itemJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F40FCBA2C167D2600AEB662 /* itemJSON.json */; };
 		4F40FCBD2C167D5900AEB662 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40FCBC2C167D5900AEB662 /* ItemType.swift */; };
 		4F6032962C1741130074FCD5 /* XLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6032952C1741130074FCD5 /* XLHandler.swift */; };
-		4F6032992C1766520074FCD5 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6032982C1766520074FCD5 /* CoreXLSX */; };
 		4F914B0F2C24680A00821CCA /* SizePropertiesCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B0E2C24680A00821CCA /* SizePropertiesCreationView.swift */; };
 		4F914B112C2497CC00821CCA /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B102C2497CC00821CCA /* Extension+String.swift */; };
 		4F914B132C24AB0C00821CCA /* ItemByColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B122C24AB0C00821CCA /* ItemByColor.swift */; };
 		4F914B172C24BE2900821CCA /* DataModelConverted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B162C24BE2900821CCA /* DataModelConverted.swift */; };
 		4F914B192C24E2BE00821CCA /* BagsPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */; };
-		4F914B1B2C24F42300821CCA /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1A2C24F42300821CCA /* ModelHandler.swift */; };
+		4F914B1B2C24F42300821CCA /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1A2C24F42300821CCA /* ModelConverter.swift */; };
 		4F914B1E2C25C04500821CCA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1D2C25C04500821CCA /* DataController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,18 +67,15 @@
 		4F2987BA2C1A6A3A00B2746F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4F2987BC2C1B834800B2746F /* TEST JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TEST JSON.swift"; sourceTree = "<group>"; };
 		4F2987BE2C1B87B700B2746F /* ColorNameEng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNameEng.swift; sourceTree = "<group>"; };
-		4F2987C12C1BAC3200B2746F /* SizeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStackView.swift; sourceTree = "<group>"; };
 		4F2987C32C1BAFB400B2746F /* LayoutDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDSL.swift; sourceTree = "<group>"; };
-		4F2987C52C1BB5E400B2746F /* SizeDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeDataStackView.swift; sourceTree = "<group>"; };
-		4F2987C72C1C543600B2746F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4F29884F2C21B3CA00B2746F /* SizeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeInfo.swift; sourceTree = "<group>"; };
 		4F2988512C21D0F600B2746F /* SizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeData.swift; sourceTree = "<group>"; };
 		4F29887B2C2436CE00B2746F /* ColumnName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnName.swift; sourceTree = "<group>"; };
 		4F2988B42C2446C800B2746F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		4F2988B62C2446EA00B2746F /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
+		4F2988B62C2446EA00B2746F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4F2988B82C24540200B2746F /* GetLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLinkView.swift; sourceTree = "<group>"; };
+		4F3F45FA2C25F5010079C693 /* BagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagModel.swift; sourceTree = "<group>"; };
 		4F40FC882C167BBE00AEB662 /* 1688InfoToExcelParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1688InfoToExcelParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F40FC8D2C167BBE00AEB662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F40FC992C167BBF00AEB662 /* 1688InfoToExcelParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1688InfoToExcelParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +93,7 @@
 		4F914B122C24AB0C00821CCA /* ItemByColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemByColor.swift; sourceTree = "<group>"; };
 		4F914B162C24BE2900821CCA /* DataModelConverted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelConverted.swift; sourceTree = "<group>"; };
 		4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsPropertiesView.swift; sourceTree = "<group>"; };
-		4F914B1A2C24F42300821CCA /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
+		4F914B1A2C24F42300821CCA /* ModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConverter.swift; sourceTree = "<group>"; };
 		4F914B1D2C25C04500821CCA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4FDFA1072C25F21E009EF1DD /* 1688InfoToExcelParser.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = 1688InfoToExcelParser.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F6032992C1766520074FCD5 /* CoreXLSX in Frameworks */,
 				4F29879E2C18DA6D00B2746F /* SwiftXLSX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +127,7 @@
 		4F2987C02C1B8A8400B2746F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F3F45FA2C25F5010079C693 /* BagModel.swift */,
 				4F40FCBC2C167D5900AEB662 /* ItemType.swift */,
 				4F914B122C24AB0C00821CCA /* ItemByColor.swift */,
 				4F40FCB82C167D0200AEB662 /* ProductProperties.swift */,
@@ -148,24 +141,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4F2988532C21D17700B2746F /* AppFlow */ = {
-			isa = PBXGroup;
-			children = (
-				4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */,
-			);
-			path = AppFlow;
-			sourceTree = "<group>";
-		};
-		4F2988542C21D18000B2746F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4F2987C72C1C543600B2746F /* MainView.swift */,
-				4F2987C12C1BAC3200B2746F /* SizeStackView.swift */,
-				4F2987C52C1BB5E400B2746F /* SizeDataStackView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4F29887A2C2436B500B2746F /* XLCreator */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +148,55 @@
 				4F29887B2C2436CE00B2746F /* ColumnName.swift */,
 			);
 			path = XLCreator;
+			sourceTree = "<group>";
+		};
+		4F3F45F72C25F4AB0079C693 /* OldVIews */ = {
+			isa = PBXGroup;
+			children = (
+				4F40FC8D2C167BBE00AEB662 /* ViewController.swift */,
+			);
+			path = OldVIews;
+			sourceTree = "<group>";
+		};
+		4F3F45F82C25F4CC0079C693 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F914B1D2C25C04500821CCA /* DataController.swift */,
+				4F914B1A2C24F42300821CCA /* ModelConverter.swift */,
+				4F40FCB62C167C2000AEB662 /* Network.swift */,
+				4F29887A2C2436B500B2746F /* XLCreator */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4F3F45F92C25F4D90079C693 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F2988B82C24540200B2746F /* GetLinkView.swift */,
+				4F914B0E2C24680A00821CCA /* SizePropertiesCreationView.swift */,
+				4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F3F45FC2C25F54A0079C693 /* JSON Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F2987BC2C1B834800B2746F /* TEST JSON.swift */,
+				4F40FCBA2C167D2600AEB662 /* itemJSON.json */,
+				4F2987B42C1A649E00B2746F /* bigJSON.json */,
+				4F2987B52C1A649E00B2746F /* forth.json */,
+				4F2987B62C1A649E00B2746F /* third.json */,
+			);
+			path = "JSON Files";
+			sourceTree = "<group>";
+		};
+		4F3F45FD2C25F55A0079C693 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F2987C32C1BAFB400B2746F /* LayoutDSL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4F40FC7F2C167BBE00AEB662 = {
@@ -198,26 +222,15 @@
 		4F40FC8A2C167BBE00AEB662 /* 1688InfoToExcelParser */ = {
 			isa = PBXGroup;
 			children = (
-				4FDFA1072C25F21E009EF1DD /* 1688InfoToExcelParser.entitlements */,
 				4F2988B42C2446C800B2746F /* App.swift */,
-				4F2988B62C2446EA00B2746F /* MainViews.swift */,
-				4F914B1D2C25C04500821CCA /* DataController.swift */,
-				4F914B1A2C24F42300821CCA /* ModelHandler.swift */,
-				4F2988B82C24540200B2746F /* GetLinkView.swift */,
-				4F914B0E2C24680A00821CCA /* SizePropertiesCreationView.swift */,
-				4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */,
-				4F2988532C21D17700B2746F /* AppFlow */,
-				4F40FC8D2C167BBE00AEB662 /* ViewController.swift */,
-				4F2988542C21D18000B2746F /* View */,
+				4F2988B62C2446EA00B2746F /* MainView.swift */,
+				4F3F45F82C25F4CC0079C693 /* Controllers */,
+				4F3F45F92C25F4D90079C693 /* Views */,
+				4F3F45F72C25F4AB0079C693 /* OldVIews */,
 				4F2987C02C1B8A8400B2746F /* Models */,
-				4F29887A2C2436B500B2746F /* XLCreator */,
-				4F40FCB62C167C2000AEB662 /* Network.swift */,
-				4F2987BC2C1B834800B2746F /* TEST JSON.swift */,
-				4F2987C32C1BAFB400B2746F /* LayoutDSL.swift */,
-				4F40FCBA2C167D2600AEB662 /* itemJSON.json */,
-				4F2987B42C1A649E00B2746F /* bigJSON.json */,
-				4F2987B52C1A649E00B2746F /* forth.json */,
-				4F2987B62C1A649E00B2746F /* third.json */,
+				4F3F45FD2C25F55A0079C693 /* Extensions */,
+				4F3F45FC2C25F54A0079C693 /* JSON Files */,
+				4FDFA1072C25F21E009EF1DD /* 1688InfoToExcelParser.entitlements */,
 				4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */,
 			);
 			path = 1688InfoToExcelParser;
@@ -266,7 +279,6 @@
 			);
 			name = 1688InfoToExcelParser;
 			packageProductDependencies = (
-				4F6032982C1766520074FCD5 /* CoreXLSX */,
 				4F29879D2C18DA6D00B2746F /* SwiftXLSX */,
 			);
 			productName = testJSON;
@@ -342,7 +354,6 @@
 			);
 			mainGroup = 4F40FC7F2C167BBE00AEB662;
 			packageReferences = (
-				4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 				4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
 			);
 			productRefGroup = 4F40FC892C167BBE00AEB662 /* Products */;
@@ -397,18 +408,16 @@
 				4F914B1E2C25C04500821CCA /* DataController.swift in Sources */,
 				4F2987C42C1BAFB400B2746F /* LayoutDSL.swift in Sources */,
 				4F2988522C21D0F600B2746F /* SizeData.swift in Sources */,
-				4F2988B72C2446EA00B2746F /* MainViews.swift in Sources */,
-				4F2987C62C1BB5E400B2746F /* SizeDataStackView.swift in Sources */,
+				4F2988B72C2446EA00B2746F /* MainView.swift in Sources */,
 				4F2987BD2C1B834800B2746F /* TEST JSON.swift in Sources */,
 				4F914B0F2C24680A00821CCA /* SizePropertiesCreationView.swift in Sources */,
 				4F40FC8E2C167BBE00AEB662 /* ViewController.swift in Sources */,
-				4F2987C82C1C543600B2746F /* MainView.swift in Sources */,
 				4F2988B52C2446C800B2746F /* App.swift in Sources */,
+				4F3F45FB2C25F5010079C693 /* BagModel.swift in Sources */,
 				4F29887C2C2436CE00B2746F /* ColumnName.swift in Sources */,
-				4F914B1B2C24F42300821CCA /* ModelHandler.swift in Sources */,
+				4F914B1B2C24F42300821CCA /* ModelConverter.swift in Sources */,
 				4F2987BB2C1A6A3A00B2746F /* DataModel.swift in Sources */,
 				4F2987B32C1A627000B2746F /* MainModel.swift in Sources */,
-				4F40FC8C2C167BBE00AEB662 /* AppDelegate.swift in Sources */,
 				4F914B132C24AB0C00821CCA /* ItemByColor.swift in Sources */,
 				4F40FCB72C167C2000AEB662 /* Network.swift in Sources */,
 				4F40FCBD2C167D5900AEB662 /* ItemType.swift in Sources */,
@@ -416,7 +425,6 @@
 				4F2988B92C24540200B2746F /* GetLinkView.swift in Sources */,
 				4F2988502C21B3CA00B2746F /* SizeInfo.swift in Sources */,
 				4F914B192C24E2BE00821CCA /* BagsPropertiesView.swift in Sources */,
-				4F2987C22C1BAC3200B2746F /* SizeStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,14 +757,6 @@
 				kind = branch;
 			};
 		};
-		4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CoreOffice/CoreXLSX.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -764,11 +764,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
 			productName = SwiftXLSX;
-		};
-		4F6032982C1766520074FCD5 /* CoreXLSX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F6032972C1741B20074FCD5 /* XCRemoteSwiftPackageReference "CoreXLSX" */;
-			productName = CoreXLSX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ModelHandler.swift
+//  ModelConverter.swift
 //  testJSON
 //
 //  Created by Oleh Yeroshkin on 21.06.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ModelHandler {
+class ModelConverter {
     func convert(from data: DataModel) async throws -> DataModelConverted {
         let imagesData = try await getImagesData(from: data.main_imgs)
         let productProps: ProductProperties = .init(prop: data.product_props)
@@ -28,7 +28,7 @@ class ModelHandler {
     }
 }
 
-private extension ModelHandler {
+private extension ModelConverter {
 
     //    {
     //      "skuid": "4828077161253",

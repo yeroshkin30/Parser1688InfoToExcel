@@ -9,10 +9,6 @@ struct ItemType {
     let sizeInfo: SizeInfo
 }
 
-struct DeliveryInfo: Codable {
-    let unit_weight: Float
-}
-
 struct Model {
     let title: String?
     let images: [NSImage]
@@ -35,22 +31,3 @@ struct Model {
     let weight: Float
     let fabric: String
 }
-
-struct BagModel {
-    let title: String?
-    let images: [Data]
-    let article: String
-    let aritcleAndColorSku: String?
-    let productName: String? // dress
-    let price: String
-
-    let itemsByColor: [ItemByColor]
-
-    let weight: Float
-    let compositionChinese: String
-    let bagSize: String
-    let fabric: String
-    let strap: String
-}
-
-

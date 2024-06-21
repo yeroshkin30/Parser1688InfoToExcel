@@ -39,6 +39,10 @@ struct SKUProps: Codable {
     }
 }
 
+struct DeliveryInfo: Codable {
+    let unit_weight: Float
+}
+
 //{
 //  "name": "漂白色",
 //  "vid": "0",
@@ -56,7 +60,6 @@ struct SKUValue: Codable {
     }
 }
 
-// MARK: - Main model
 
 struct PhotoByColor {
     let colorChinese: String

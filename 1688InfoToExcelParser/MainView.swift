@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct MainViews: View {
+struct MainView: View {
     @State var dataController: DataController = .init()
     @State var loadingState: LoadingState = .loaded("None")
-    @State var bagEditData: BagEditData = .init()
     @State var sizesData: [SizeData] = []
 
     var body: some View {
@@ -22,7 +21,7 @@ struct MainViews: View {
 
             switch dataController.itemTypes {
             case .bags:
-                BagsPropertiesView(bagEditData: $bagEditData)
+                BagsPropertiesView(bagEditData: $dataController.bagData)
             case .cloth:
                 SizePropertiesCreationView(sizeData: sizesData)
             case .none:
@@ -65,6 +64,6 @@ struct LoaderView: View {
 }
 
 #Preview {
-    MainViews() 
+    MainView() 
 }
 
