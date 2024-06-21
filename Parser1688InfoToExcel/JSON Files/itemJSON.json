@@ -1,0 +1,332 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "item_id": 678308989503,
+    "product_url": "",
+    "title": "头层牛皮新款休闲女包包单肩斜挎中号包 女士手袋 大容量三肩带",
+    "category_id": "201580619",
+    "root_category_id": "1042954",
+    "currency": "CNY",
+    "offer_unit": "个",
+    "product_props": [
+      {
+        "颜色": "宝蓝色,黑色,焦糖色,奶昔白色,酒红色,灰色,墨绿色,珍珠蓝,湖水绿色"
+      },
+      {
+        "风格": "跨境风潮"
+      },
+      {
+        "货号": "6688#"
+      },
+      {
+        "材质": "真皮"
+      },
+      {
+        "皮质特征": "头层牛皮"
+      },
+      {
+        "箱包潮流款式": "贝壳包"
+      },
+      {
+        "箱包大小": "中"
+      },
+      {
+        "流行元素": "20646276413"
+      },
+      {
+        "上市年份季节": "2022年春季"
+      },
+      {
+        "里料质地": "涤棉"
+      },
+      {
+        "箱包形状": "贝壳型"
+      },
+      {
+        "开盖方式": "拉链"
+      },
+      {
+        "包内部结构": "拉链暗袋,手机袋,夹层拉链袋"
+      },
+      {
+        "硬度": "中偏软"
+      },
+      {
+        "外袋种类": "敞口袋"
+      },
+      {
+        "品牌": "欧品典"
+      },
+      {
+        "有可授权的自有品牌": "否"
+      },
+      {
+        "有无夹层": "有"
+      },
+      {
+        "肩带根数": "三根"
+      },
+      {
+        "适用场景": "日常搭配"
+      },
+      {
+        "款式": "女式单肩包"
+      },
+      {
+        "系列": "欧品典"
+      },
+      {
+        "最晚发货时间": "7"
+      }
+    ],
+    "main_imgs": [
+      "https://cbu01.alicdn.com/img/ibank/O1CN01tA5RFp1sjpDcxPlzC_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01giN6dY1sjpDgw9lXx_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01Y8xAQ31sjpDiB9EGx_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN014Ifv7c1sjpDiVHro8_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01ARLsD71sjpDgwA6Pa_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01qQTnxX1sjp8WIinDi_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN0157JB8t1sjpD62ofy8_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01KAT7nA1sjp8bIf5KE_!!2217095803-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01SL39PI1sjp8ZJ0noo_!!2217095803-0-cib.jpg"
+    ],
+    "video_url": "https://cloud.video.taobao.com/play/u/2217095803/p/2/e/6/t/1/368226334911.mp4",
+    "detail_url": "https://air.1688.com/pages/od/app-desc/d7p56fw2w/index.html?url=https://itemcdn.tmall.com/1688offer/icoss1400697290b36713bc0d7df98b&offerId=678308989503&sellerLoginId=潮品黛皮具批发商行",
+    "sale_count": "207",
+    "sale_info": {
+      "sale_quantity_90days": "207"
+    },
+    "price_info": {
+      "price": "75.00",
+      "origin_price": null,
+      "price_min": "70.00",
+      "price_max": "75.00",
+      "origin_price_min": "70.00",
+      "origin_price_max": "75.00",
+      "discount_price": ""
+    },
+    "tiered_price_info": {
+      "begin_num": "1",
+      "prices": [
+        {
+          "beginAmount": "1",
+          "price": "75.00"
+        },
+        {
+          "beginAmount": "5",
+          "price": "72.00"
+        },
+        {
+          "beginAmount": "10",
+          "price": "70.00"
+        }
+      ]
+    },
+    "mixed_batch": {
+      "mix_amount": "38",
+      "mix_begin": "0",
+      "mix_num": "1",
+      "shop_mix_num": "2147483647"
+    },
+    "shop_info": {
+      "shop_name": "广州市白云区三元里潮品黛皮具商行",
+      "shop_url": "https://winport.m.1688.com/page/index.html?memberId=b2b-2217095803",
+      "seller_login_id": "潮品黛皮具批发商行",
+      "seller_user_id": "2217095803",
+      "seller_member_id": "b2b-2217095803"
+    },
+    "delivery_info": {
+      "location": "广东省广州市",
+      "location_code": "6280876",
+      "delivery_fee": 8,
+      "unit_weight": 1,
+      "template_id": "2685093"
+    },
+    "sku_price_scale": "￥75.00-￥70.00",
+    "sku_price_scale_original": "￥75.00-￥70.00",
+    "sku_price_range": {
+      "begin_num": "1",
+      "stock": "1518",
+      "sku_param": [
+        {
+          "beginAmount": "1",
+          "price": "75.00"
+        },
+        {
+          "beginAmount": "5",
+          "price": "72.00"
+        },
+        {
+          "beginAmount": "10",
+          "price": "70.00"
+        }
+      ],
+      "mix_param": {
+        "mixAmount": "38",
+        "mixBegin": "0",
+        "mixNum": "1",
+        "shopMixNum": "2147483647",
+        "supportMix": "true"
+      }
+    },
+    "sku_props": [
+      {
+        "pid": "0",
+        "prop_name": "颜色",
+        "values": [
+          {
+            "vid": "0",
+            "name": "宝蓝色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01KAT7nA1sjp8bIf5KE_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "1",
+            "name": "黑色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01RvKbIX1sjp8SjKskM_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "2",
+            "name": "焦糖色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01Mkv6iO1sjp8ZJ1oKw_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "3",
+            "name": "奶昔白色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01qQTnxX1sjp8WIinDi_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "4",
+            "name": "酒红色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01Vbg00n1sjp8PYDWsI_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "5",
+            "name": "灰色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01SL39PI1sjp8ZJ0noo_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "6",
+            "name": "墨绿色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN012Ry0Dj1sjp8TRXz4k_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "7",
+            "name": "珍珠蓝",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01FWUHp41sjp8J8eKZD_!!2217095803-0-cib.jpg"
+          },
+          {
+            "vid": "8",
+            "name": "湖水绿色",
+            "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN0157JB8t1sjpD62ofy8_!!2217095803-0-cib.jpg"
+          }
+        ]
+      }
+    ],
+    "skus": [
+      {
+        "skuid": "5039338322578",
+        "specid": "f561c4f7cdb23de81fc2303ebf1e8f55",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "172",
+        "props_ids": "0:1",
+        "props_names": "黑色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5039338322581",
+        "specid": "8e33ced938f52664c2730391dcea6714",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "146",
+        "props_ids": "0:4",
+        "props_names": "酒红色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5039338322583",
+        "specid": "e3f71a3780a896288f4ce5b96a722f82",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "146",
+        "props_ids": "0:6",
+        "props_names": "墨绿色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5451998632371",
+        "specid": "a89757ed5044b513f702f9e2e38cde40",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "182",
+        "props_ids": "0:0",
+        "props_names": "宝蓝色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5451998632370",
+        "specid": "f63edcb29c652cb3fc169af865e9d129",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "164",
+        "props_ids": "0:2",
+        "props_names": "焦糖色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5451998632373",
+        "specid": "7beb5fdb22d85f44e1e18f3c22f60c24",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "136",
+        "props_ids": "0:3",
+        "props_names": "奶昔白色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5451998632372",
+        "specid": "9693836f5806a11242ac16aac13690f9",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "187",
+        "props_ids": "0:7",
+        "props_names": "珍珠蓝",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5039338322582",
+        "specid": "6a67a0c231ddcbfe73c4ab1dfcaa0ced",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "190",
+        "props_ids": "0:5",
+        "props_names": "灰色",
+        "sale_count": "0"
+      },
+      {
+        "skuid": "5010507896858",
+        "specid": "c6eb8d58cb6c12ef50446c99be14458e",
+        "sale_price": "75.00",
+        "origin_price": "75.00",
+        "stock": "195",
+        "props_ids": "0:8",
+        "props_names": "湖水绿色",
+        "sale_count": "0"
+      }
+    ],
+    "is_sold_out": false,
+    "stock": 1518,
+    "promotions": [
+      {
+        "promotion_id": "",
+        "title": "1件混批",
+        "content": "本店部分商品满38元或1件可混批采购",
+        "start_time": null,
+        "end_time": null,
+        "type": "MIX_WHOLESALE",
+        "type_name": "混批"
+      }
+    ]
+  }
+}
