@@ -44,14 +44,7 @@ final class SizeStackView: NSStackView {
     }
 
     func getSizeData() -> SizeData {
-        .init(sizeInfo: sizeInfo,
-              productLength: productLength.stringValue,
-              shoulderLength: shoulderLength.stringValue,
-              bust: bust.stringValue,
-              waist: waist.stringValue,
-              hips: hips.stringValue,
-              sleeve: sleeve.stringValue
-        )
+        .init(sizeInfo: .init(sizeChinese: "Sdf"))
     }
 }
 

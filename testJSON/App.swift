@@ -14,7 +14,7 @@ import SwiftUI
 struct _688DetailsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainViews()
         }
     }
 }

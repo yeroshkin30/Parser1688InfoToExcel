@@ -49,6 +49,57 @@ class NetworkController {
 
         return mainModel
     }
+
+    func getMainModel(from urlString: String) async throws -> MainModel {
+        guard let id = getIDNumberFromURL(from: urlString) else {
+            throw Errors.cantGetIDFromURL
+        }
+
+        var urlRequest = URLRequest(url: URL(string: "https://1688-product2.p.rapidapi.com/1688/v2/item_detail?item_id=\(String(id))")!)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.timeoutInterval = 10
+        urlRequest.cachePolicy = .useProtocolCachePolicy
+
+        let (data, response) = try await session.data(for: urlRequest)
+
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw Errors.dataNotFound
+        }
+
+        // Check if the response was from cache
+               if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
+                   print("Cache Status: \(userInfo)")
+               }
+
+        let mainModel = try JSONDecoder().decode(MainModel.self, from: data)
+
+        return mainModel
+    }
+
+    private func getIDNumberFromURL(from urlString: String) -> String? {
+            let pattern = #"offer/(\d+)\.html"#
+    
+            do {
+                // Create a regular expression object
+                let regex = try NSRegularExpression(pattern: pattern)
+    
+                // Search for matches in the URL string
+                let results = regex.matches(in: urlString, range: NSRange(urlString.startIndex..., in: urlString))
+    
+                if let match = results.first, let range = Range(match.range(at: 1), in: urlString) {
+                    let number = String(urlString[range])
+                    print("Extracted number: \(number)")
+                    return number
+                } else {
+                    print("No match found")
+                    return nil
+                }
+            } catch {
+                print("Invalid regex: \(error.localizedDescription)")
+                return nil
+            }
+        }
 }
 
 
@@ -60,6 +111,16 @@ func getImages(from urls: [URL]) async throws -> [NSImage] {
     }
 
     return images
+}
+
+func getImagesData(from urls: [URL]) async throws -> [Data] {
+    var imagesData: [Data] = []
+    for url in urls {
+        let imageData = try await getImageData(from: url)
+        imagesData.append(imageData)
+    }
+
+    return imagesData
 }
 
 func getImage(from url: URL) async throws -> NSImage {
@@ -88,7 +149,24 @@ func getImage(from url: URL) async throws -> NSImage {
     }
 }
 
+func getImageData(from url: URL) async throws -> Data {
+    let (data, response) = try await URLSession.shared.data(from: url)
+
+    guard let httpResponse = response as? HTTPURLResponse else {
+        print("Invalid response")
+        throw Errors.invalidResponse
+    }
+
+    guard httpResponse.statusCode == 200 else {
+        print("HTTP error: \(httpResponse.statusCode)")
+        throw Errors.httpError(code: httpResponse.statusCode)
+    }
+
+    return data
+}
+
 enum Errors: Error {
+    case cantGetIDFromURL
     case imageNotFound
     case invalidResponse
     case httpError(code: Int)

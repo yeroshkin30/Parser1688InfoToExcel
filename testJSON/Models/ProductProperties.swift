@@ -5,7 +5,7 @@ struct ProductProperties {
     var mainFabricComposition: String?
     var article: String?
     var colour: String?
-    var size: String?
+    var sizesChinese: [String]?
     var fabricPercent: String?
     var fabricValueForTable: String?
     var fabricValueChinise: String?
@@ -25,8 +25,9 @@ struct ProductProperties {
         self.mainFabricComposition = singleDictionary[Props.mainFabricComposition.rawValue]
         self.article = singleDictionary[Props.articleNumber.rawValue]?.removeChineseCharacters()
         self.colour = singleDictionary[Props.colour.rawValue]
-        self.size = singleDictionary[Props.size.rawValue]
+        self.sizesChinese = singleDictionary[Props.size.rawValue]?.components(separatedBy: ",")
         self.fabricPercent = singleDictionary[Props.fabricPercent.rawValue]
+
         let numberSring = extractNumber(from: fabricPercent) ?? ""
         self.fabricValueForTable = numberSring + (mainFabricComposition ?? "No fabric")
         self.fabricValueChinise = numberSring + (mainFabricComposition ?? "No fabric")
