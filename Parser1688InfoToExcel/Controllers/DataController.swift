@@ -25,19 +25,20 @@ class DataController {
 
     func getDataFromURL(string: String) {
         currentLink = string
-//        Task {
-//            let model: MainModel = try await networkController.getMainModel(from: string)
-//            loadingState = .loading("Converting model")
-//            let convertedModel: DataModelConverted = try await modelHandler.convert(from: model.data)
-//            loadingState = .loaded("Converted model created")
-//            bagData = .init(
-//                fabricChinese: convertedModel.productProperties.fabricForBags,
-//                strapsData: convertedModel.productProperties.straps
-//            )
-//            itemTypes = .bags
-//            self.convertedModel = convertedModel
-//        }
-        setupModels()
+        Task {
+            loadingState = .loading("Converting model")
+            let model: MainModel = try await networkController.getMainModel(from: string)
+
+            let convertedModel: DataModelConverted = try await modelHandler.convert(from: model.data)
+            loadingState = .loaded("Converted model created")
+            
+            bagData = .init(
+                fabricChinese: convertedModel.productProperties.fabricForBags,
+                strapsData: convertedModel.productProperties.straps
+            )
+            itemTypes = .bags
+            self.convertedModel = convertedModel
+        }
     }
 
     func createXLFile() {
@@ -46,6 +47,7 @@ class DataController {
 
         loadingState = .loading("Creating XL file")
         Task {
+            /// Heavy task
             xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
             loadingState = .loaded("XL file was craeted")
         }
