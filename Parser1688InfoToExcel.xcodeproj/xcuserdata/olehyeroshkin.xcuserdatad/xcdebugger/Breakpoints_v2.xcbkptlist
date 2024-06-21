@@ -3,4 +3,52 @@
    uuid = "1DE1BF37-F6A3-4FA3-A662-D18BCC9C1642"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8D0F9CE-1AB8-4F48-B2C0-7E8EB32A4988"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Parser1688InfoToExcel/Controllers/XLCreator/XLCreator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "addCell(to:row:col:width:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D8D0F9CE-1AB8-4F48-B2C0-7E8EB32A4988 - 90f01298d8735c80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser1688InfoToExcel.XLCreator.addCell(to: SwiftXLSX.XSheet, row: Swift.Int, col: Parser1688InfoToExcel.ColumnName, width: Swift.Optional&lt;Swift.Int&gt;) -&gt; SwiftXLSX.XCell"
+                  moduleName = "Parser1688InfoToExcel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olehyeroshkin/Downloads/Parser1688InfoToExcel/Parser1688InfoToExcel/Controllers/XLCreator/XLCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "255"
+                  endingLineNumber = "255">
+               </Location>
+               <Location
+                  uuid = "D8D0F9CE-1AB8-4F48-B2C0-7E8EB32A4988 - 90f01298d8735c80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser1688InfoToExcel.XLCreator.addCell(to: SwiftXLSX.XSheet, row: Swift.Int, col: Parser1688InfoToExcel.ColumnName, width: Swift.Optional&lt;Swift.Int&gt;) -&gt; SwiftXLSX.XCell"
+                  moduleName = "Parser1688InfoToExcel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olehyeroshkin/Downloads/Parser1688InfoToExcel/Parser1688InfoToExcel/Controllers/XLCreator/XLCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "255"
+                  endingLineNumber = "255">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -46,7 +46,7 @@ class DataController {
         loadingState = .loading("Creating XL file")
         Task {
             xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
-            loadingState = .loaded("XL file was craeted")
+            loadingState = .loaded("XL file was created")
         }
     }
 

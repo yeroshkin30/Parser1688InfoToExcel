@@ -15,15 +15,15 @@ class XLCreator {
         for item in model.itemsByColor {
 
             if let imageData = item.imageData, let image = NSImage(data: imageData) {
-                let imageSize: CGSize = .init(width: 100, height: 100)
+                let imageSize: CGSize = .init(width: 130, height: 130)
                 let imageCellValue: XImageCell = XImageCell(key: XImages.append(with: image)!, size: imageSize)
-                cell = addCell(to: sheet, row: row, col: .image)
+                cell = addCell(to: sheet, row: row, col: .image, width: 200)
                 cell.value = .icon(imageCellValue)
             }
 
             for sizeAndQuantity in item.dataBySize {
                 cell = addCell(to: sheet, row: row, col: .brand, width: 300)
-                cell.value = .text(id)
+                cell.value = .text("Chaopindai")
 
                 cell = addCell(to: sheet, row: row, col: .article)
                 cell.value = .text(model.article)
@@ -86,6 +86,8 @@ class XLCreator {
                 cell = addCell(to: sheet, row: row, col: .link)
                 cell.value = .text(currentLink)
 
+                sheet.ForRowSetHeight(row, 134)
+
                 row += 1
             }
         }
@@ -117,8 +119,8 @@ class XLCreator {
         print("\(fileid)")
         fileid.removeLast(5)
 
-        saveImages(id: id, images: images, to: fileid)
-        saveImagesByColor(id: id, itemsByColors: model.itemsByColor, to: fileid)
+        saveImages(id: model.article, images: images, to: fileid)
+        saveImagesByColor(id: model.article, itemsByColors: model.itemsByColor, to: fileid)
     }
 
     func setupSheet(book: XWorkBook) -> XSheet {
@@ -241,6 +243,7 @@ class XLCreator {
         if let width {
             cell.width = width
         }
+        cell.Border = true
 
         return cell
     }
@@ -251,6 +254,8 @@ class XLCreator {
         if let width {
             cell.width = width
         }
+        cell.Border = true
+        cell.alignmentHorizontal = .center
 
         return cell
     }
@@ -312,7 +317,7 @@ func saveImage(to directoryPath: String, imageData: Data?, id: String, name: Str
         return
     }
 
-    let filePath = (directoryPath as NSString).appendingPathComponent("\(id) \(name).png")
+    let filePath = (directoryPath as NSString).appendingPathComponent("\(id)_\(name).png")
     do {
         try pngData.write(to: URL(fileURLWithPath: filePath))
         print("Saved image at: \(filePath)")
