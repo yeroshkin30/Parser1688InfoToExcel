@@ -81,14 +81,13 @@
 		4F2988B42C2446C800B2746F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		4F2988B62C2446EA00B2746F /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
 		4F2988B82C24540200B2746F /* GetLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLinkView.swift; sourceTree = "<group>"; };
-		4F40FC882C167BBE00AEB662 /* testJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F40FC882C167BBE00AEB662 /* 1688InfoToExcelParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1688InfoToExcelParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FC8B2C167BBE00AEB662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F40FC8D2C167BBE00AEB662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F40FC942C167BBF00AEB662 /* testJSON.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testJSON.entitlements; sourceTree = "<group>"; };
-		4F40FC992C167BBF00AEB662 /* testJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F40FC992C167BBF00AEB662 /* 1688InfoToExcelParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1688InfoToExcelParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FC9D2C167BBF00AEB662 /* testJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONTests.swift; sourceTree = "<group>"; };
-		4F40FCA32C167BBF00AEB662 /* testJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F40FCA32C167BBF00AEB662 /* 1688InfoToExcelParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1688InfoToExcelParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40FCA72C167BBF00AEB662 /* testJSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONUITests.swift; sourceTree = "<group>"; };
 		4F40FCA92C167BBF00AEB662 /* testJSONUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testJSONUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F40FCB62C167C2000AEB662 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsPropertiesView.swift; sourceTree = "<group>"; };
 		4F914B1A2C24F42300821CCA /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
 		4F914B1D2C25C04500821CCA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4FDFA1072C25F21E009EF1DD /* 1688InfoToExcelParser.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = 1688InfoToExcelParser.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 		4F40FC7F2C167BBE00AEB662 = {
 			isa = PBXGroup;
 			children = (
-				4F40FC8A2C167BBE00AEB662 /* testJSON */,
+				4F40FC8A2C167BBE00AEB662 /* 1688InfoToExcelParser */,
 				4F40FC9C2C167BBF00AEB662 /* testJSONTests */,
 				4F40FCA62C167BBF00AEB662 /* testJSONUITests */,
 				4F40FC892C167BBE00AEB662 /* Products */,
@@ -188,16 +188,17 @@
 		4F40FC892C167BBE00AEB662 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F40FC882C167BBE00AEB662 /* testJSON.app */,
-				4F40FC992C167BBF00AEB662 /* testJSONTests.xctest */,
-				4F40FCA32C167BBF00AEB662 /* testJSONUITests.xctest */,
+				4F40FC882C167BBE00AEB662 /* 1688InfoToExcelParser.app */,
+				4F40FC992C167BBF00AEB662 /* 1688InfoToExcelParserTests.xctest */,
+				4F40FCA32C167BBF00AEB662 /* 1688InfoToExcelParserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F40FC8A2C167BBE00AEB662 /* testJSON */ = {
+		4F40FC8A2C167BBE00AEB662 /* 1688InfoToExcelParser */ = {
 			isa = PBXGroup;
 			children = (
+				4FDFA1072C25F21E009EF1DD /* 1688InfoToExcelParser.entitlements */,
 				4F2988B42C2446C800B2746F /* App.swift */,
 				4F2988B62C2446EA00B2746F /* MainViews.swift */,
 				4F914B1D2C25C04500821CCA /* DataController.swift */,
@@ -218,9 +219,8 @@
 				4F2987B52C1A649E00B2746F /* forth.json */,
 				4F2987B62C1A649E00B2746F /* third.json */,
 				4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */,
-				4F40FC942C167BBF00AEB662 /* testJSON.entitlements */,
 			);
-			path = testJSON;
+			path = 1688InfoToExcelParser;
 			sourceTree = "<group>";
 		};
 		4F40FC9C2C167BBF00AEB662 /* testJSONTests */ = {
@@ -252,9 +252,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F40FC872C167BBE00AEB662 /* testJSON */ = {
+		4F40FC872C167BBE00AEB662 /* 1688InfoToExcelParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F40FCAD2C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSON" */;
+			buildConfigurationList = 4F40FCAD2C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParser" */;
 			buildPhases = (
 				4F40FC842C167BBE00AEB662 /* Sources */,
 				4F40FC852C167BBE00AEB662 /* Frameworks */,
@@ -264,18 +264,18 @@
 			);
 			dependencies = (
 			);
-			name = testJSON;
+			name = 1688InfoToExcelParser;
 			packageProductDependencies = (
 				4F6032982C1766520074FCD5 /* CoreXLSX */,
 				4F29879D2C18DA6D00B2746F /* SwiftXLSX */,
 			);
 			productName = testJSON;
-			productReference = 4F40FC882C167BBE00AEB662 /* testJSON.app */;
+			productReference = 4F40FC882C167BBE00AEB662 /* 1688InfoToExcelParser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4F40FC982C167BBF00AEB662 /* testJSONTests */ = {
+		4F40FC982C167BBF00AEB662 /* 1688InfoToExcelParserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F40FCB02C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSONTests" */;
+			buildConfigurationList = 4F40FCB02C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParserTests" */;
 			buildPhases = (
 				4F40FC952C167BBF00AEB662 /* Sources */,
 				4F40FC962C167BBF00AEB662 /* Frameworks */,
@@ -286,14 +286,14 @@
 			dependencies = (
 				4F40FC9B2C167BBF00AEB662 /* PBXTargetDependency */,
 			);
-			name = testJSONTests;
+			name = 1688InfoToExcelParserTests;
 			productName = testJSONTests;
-			productReference = 4F40FC992C167BBF00AEB662 /* testJSONTests.xctest */;
+			productReference = 4F40FC992C167BBF00AEB662 /* 1688InfoToExcelParserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4F40FCA22C167BBF00AEB662 /* testJSONUITests */ = {
+		4F40FCA22C167BBF00AEB662 /* 1688InfoToExcelParserUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F40FCB32C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSONUITests" */;
+			buildConfigurationList = 4F40FCB32C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParserUITests" */;
 			buildPhases = (
 				4F40FC9F2C167BBF00AEB662 /* Sources */,
 				4F40FCA02C167BBF00AEB662 /* Frameworks */,
@@ -304,9 +304,9 @@
 			dependencies = (
 				4F40FCA52C167BBF00AEB662 /* PBXTargetDependency */,
 			);
-			name = testJSONUITests;
+			name = 1688InfoToExcelParserUITests;
 			productName = testJSONUITests;
-			productReference = 4F40FCA32C167BBF00AEB662 /* testJSONUITests.xctest */;
+			productReference = 4F40FCA32C167BBF00AEB662 /* 1688InfoToExcelParserUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4F40FC832C167BBE00AEB662 /* Build configuration list for PBXProject "testJSON" */;
+			buildConfigurationList = 4F40FC832C167BBE00AEB662 /* Build configuration list for PBXProject "1688InfoToExcelParser" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -349,9 +349,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F40FC872C167BBE00AEB662 /* testJSON */,
-				4F40FC982C167BBF00AEB662 /* testJSONTests */,
-				4F40FCA22C167BBF00AEB662 /* testJSONUITests */,
+				4F40FC872C167BBE00AEB662 /* 1688InfoToExcelParser */,
+				4F40FC982C167BBF00AEB662 /* 1688InfoToExcelParserTests */,
+				4F40FCA22C167BBF00AEB662 /* 1688InfoToExcelParserUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -442,12 +442,12 @@
 /* Begin PBXTargetDependency section */
 		4F40FC9B2C167BBF00AEB662 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F40FC872C167BBE00AEB662 /* testJSON */;
+			target = 4F40FC872C167BBE00AEB662 /* 1688InfoToExcelParser */;
 			targetProxy = 4F40FC9A2C167BBF00AEB662 /* PBXContainerItemProxy */;
 		};
 		4F40FCA52C167BBF00AEB662 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F40FC872C167BBE00AEB662 /* testJSON */;
+			target = 4F40FC872C167BBE00AEB662 /* 1688InfoToExcelParser */;
 			targetProxy = 4F40FCA42C167BBF00AEB662 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -576,7 +576,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = testJSON/testJSON.entitlements;
+				CODE_SIGN_ENTITLEMENTS = 1688InfoToExcelParser/1688InfoToExcelParser.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -591,7 +592,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = delete.testJSON;
+				PRODUCT_BUNDLE_IDENTIFIER = 1688InfoToExelParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -603,7 +604,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = testJSON/testJSON.entitlements;
+				CODE_SIGN_ENTITLEMENTS = 1688InfoToExcelParser/1688InfoToExcelParser.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -618,7 +620,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = delete.testJSON;
+				PRODUCT_BUNDLE_IDENTIFIER = 1688InfoToExelParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -640,7 +642,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testJSON.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/testJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1688InfoToExcelParser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/1688InfoToExcelParser";
 			};
 			name = Debug;
 		};
@@ -659,7 +661,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testJSON.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/testJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1688InfoToExcelParser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/1688InfoToExcelParser";
 			};
 			name = Release;
 		};
@@ -700,7 +702,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F40FC832C167BBE00AEB662 /* Build configuration list for PBXProject "testJSON" */ = {
+		4F40FC832C167BBE00AEB662 /* Build configuration list for PBXProject "1688InfoToExcelParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F40FCAB2C167BBF00AEB662 /* Debug */,
@@ -709,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F40FCAD2C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSON" */ = {
+		4F40FCAD2C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F40FCAE2C167BBF00AEB662 /* Debug */,
@@ -718,7 +720,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F40FCB02C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSONTests" */ = {
+		4F40FCB02C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F40FCB12C167BBF00AEB662 /* Debug */,
@@ -727,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F40FCB32C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "testJSONUITests" */ = {
+		4F40FCB32C167BBF00AEB662 /* Build configuration list for PBXNativeTarget "1688InfoToExcelParserUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F40FCB42C167BBF00AEB662 /* Debug */,
