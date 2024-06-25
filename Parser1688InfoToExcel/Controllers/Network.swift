@@ -68,9 +68,9 @@ class NetworkController {
         }
 
         // Check if the response was from cache
-               if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
-                   print("Cache Status: \(userInfo)")
-               }
+        if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
+            print("Cache Status: \(userInfo)")
+        }
 
         let mainModel = try JSONDecoder().decode(MainModel.self, from: data)
 

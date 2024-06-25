@@ -25,17 +25,22 @@ class DataController {
 
     func getDataFromURL(string: String) {
         currentLink = string
+        itemTypes = .none
         Task {
-            let model: MainModel = try await networkController.getMainModel(from: string)
-            loadingState = .loading("Converting model")
-            let convertedModel: DataModelConverted = try await modelHandler.convert(from: model.data)
-            loadingState = .loaded("Converted model created")
-            bagData = .init(
-                fabricChinese: convertedModel.productProperties.fabricForBags,
-                strapsData: convertedModel.productProperties.straps
-            )
-            itemTypes = .bags
-            self.convertedModel = convertedModel
+            do {
+                let model: MainModel = try await networkController.getMainModel(from: string)
+                loadingState = .loading("Converting model")
+                let convertedModel: DataModelConverted = try await modelHandler.convert(from: model.data)
+                loadingState = .loaded("Converted model created")
+                bagData = .init(
+                    fabricChinese: convertedModel.productProperties.fabricForBags,
+                    strapsData: convertedModel.productProperties.straps
+                )
+                itemTypes = .bags
+                self.convertedModel = convertedModel
+            } catch {
+                print(error)
+            }
         }
     }
 

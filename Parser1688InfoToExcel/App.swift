@@ -11,7 +11,7 @@ import Foundation
 import SwiftUI
 
 @main
-struct _688DetailsApp: App {
+struct Parser1688DetailsApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()

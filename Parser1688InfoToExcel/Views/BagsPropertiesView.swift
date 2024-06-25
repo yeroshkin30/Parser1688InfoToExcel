@@ -19,7 +19,7 @@ struct BagsPropertiesView: View {
                 CustomTextField(inputText: $bagEditData.straps, title: "Straps", value: bagEditData.strapsData)
             }
         }
-        .padding()
+        .padding()  
         .frame(width: 400)
     }
 }
