@@ -10,8 +10,14 @@ class NetworkController {
 //    ]
 
     // Jurist acc
+//    let headers = [
+//        "x-rapidapi-key": "6c9d706434mshfee7aa859ff0bdbp1e5837jsn8156908f1c9a",
+//        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
+//    ]
+
+    // erh acc
     let headers = [
-        "x-rapidapi-key": "6c9d706434mshfee7aa859ff0bdbp1e5837jsn8156908f1c9a",
+        "x-rapidapi-key": "aad9606530msh49a540a057765d4p1385c5jsnb5950c2e1466",
         "x-rapidapi-host": "1688-product2.p.rapidapi.com"
     ]
 

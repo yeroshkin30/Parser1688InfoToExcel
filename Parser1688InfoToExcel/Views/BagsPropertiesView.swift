@@ -24,8 +24,6 @@ struct BagsPropertiesView: View {
     }
 }
 
-
-
 struct CustomTextField: View {
     @Binding var inputText: String
     let title: String

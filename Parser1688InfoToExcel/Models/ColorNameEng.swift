@@ -40,7 +40,8 @@ enum ColorNameEng: String, CaseIterable {
     case mingGreen = "薄荷绿"
     case champane = "香槟"
     case brown = "咖啡"
-    case biege = "肤色"
+    case beige = "肤色"
+    case beige2 = "卡其色"
 
     //    黑色, 黑，黑颜色  black
     //              黄色，黄，黄颜色 yellow
@@ -93,8 +94,10 @@ enum ColorNameEng: String, CaseIterable {
             return "Champane"
         case .brown:
             return "Brown"
-        case .biege:
-            return "Biege"
+        case .beige:
+            return "Beige"
+        case .beige2:
+            return "Beige"
         case .noName:
             return "No name"
         }

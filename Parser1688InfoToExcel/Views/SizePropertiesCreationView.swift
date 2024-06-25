@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct SizePropertiesCreationView: View {
-    @State var sizeData: [SizeData] = [
-        .init(sizeInfo: .init(sizeChinese: "S")),
-        .init(sizeInfo: .init(sizeChinese: "XL")),
-        .init(sizeInfo: .init(sizeChinese: "XXL"))
-    ]
+    @Binding var sizeData: [SizeData]
 
     let propertiesName =  [
         "Size",
@@ -20,54 +16,60 @@ struct SizePropertiesCreationView: View {
         "Shoulders length",
         "Bust",
         "Waist",
-        "Hips"
+        "Hips",
+        "Sleeve"
     ]
 
     var body: some View {
+
         VStack(alignment: .leading) {
-            HStack {
+
+            let columnWidth: CGFloat = 100
+
+            HStack(spacing: 10) {
                 ForEach(propertiesName, id: \.self) { propName in
                     Text(propName)
-                        .frame(width: 100)
+                        .frame(width: columnWidth)
+                        .padding(.vertical, 5)
+                        .background(Color.gray, in: RoundedRectangle(cornerRadius: 15))
                 }
-
             }
             VStack {
-                ForEach($sizeData) { sizeData in
-                    SizeStackViews(sizeData: sizeData)
+                ForEach($sizeData) { sizeDataSingle in
+                    SizeStackViews(sizeData: sizeDataSingle, columnWidth: columnWidth)
                 }
             }
-            Button { } label: {
-                Text("CreateSizeData")
+            Button {
+                // Your action here
+            } label: {
+                Text("Create Size Data")
             }
         }
         .padding()
-    }
-
-    func getStrings(from model: SizeProperties) -> [String] {
-        let mirror = Mirror(reflecting: model)
-
-        return mirror.children.compactMap { $0.label }
+        .background(.pink.opacity(0.2))
     }
 }
-
-#Preview {
-    SizePropertiesCreationView()
-}
-
 
 struct SizeStackViews: View {
     @Binding var sizeData: SizeData
+    var columnWidth: CGFloat
 
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             Text(sizeData.sizeInfo.sizeLetter.value)
-                .frame(width: 100)
-            TextField("", text: $sizeData.sizeProperties.productLength)
-            TextField("", text: $sizeData.sizeProperties.shoulderLength)
-            TextField("", text: $sizeData.sizeProperties.bust)
-            TextField("", text: $sizeData.sizeProperties.waist)
-            TextField("", text: $sizeData.sizeProperties.hips)
+                .frame(width: columnWidth)
+            TextField("Product length", text: $sizeData.sizeProperties.length)
+                .frame(width: columnWidth)
+            TextField("Shoulders length", text: $sizeData.sizeProperties.shoulder)
+                .frame(width: columnWidth)
+            TextField("Bust", text: $sizeData.sizeProperties.bust)
+                .frame(width: columnWidth)
+            TextField("Waist", text: $sizeData.sizeProperties.waist)
+                .frame(width: columnWidth)
+            TextField("Hips", text: $sizeData.sizeProperties.hips)
+                .frame(width: columnWidth)
+            TextField("Hips", text: $sizeData.sizeProperties.sleeve)
+                .frame(width: columnWidth)
         }
     }
 }

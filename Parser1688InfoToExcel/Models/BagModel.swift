@@ -24,4 +24,21 @@ struct BagModel {
     let strap: String
 }
 
+struct ClothModel {
+    let title: String?
+    let images: [Data]
+    let article: String
+    let aritcleAndColorSku: String?
+    let productName: String? // dress
+    let price: String
+
+    let itemsByColor: [ItemByColor]
+
+    let weight: Float
+    let compositionChinese: String
+    let fabric: String
+}
+
+
+
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SizeInfo {
+struct SizeInfo: Equatable, Hashable {
     let sizeNameChin: String
     let sizeLetter: SizeLetter
     var sizeNameEng: String?

@@ -11,7 +11,7 @@ import Foundation
 struct ItemByColor {
     let color: ColorInfo
     let imageData: Data?
-    let dataBySize: [SizeAndQuantity]
+    var dataBySize: [SizeAndQuantity]
 
     init(color: ColorInfo, imageData: Data?, dataBySize: [SizeAndQuantity]) {
         self.color = color
@@ -23,7 +23,7 @@ struct ItemByColor {
 }
 
 struct SizeAndQuantity {
-    let sizeData: SizeData
+    var sizeData: SizeData
     let quantity: String
 }
 

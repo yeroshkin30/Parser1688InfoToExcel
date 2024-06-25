@@ -10,7 +10,6 @@ import SwiftUI
 struct MainView: View {
     @State var dataController: DataController = .init()
     @State var loadingState: LoadingState = .loaded("None")
-    @State var sizesData: [SizeData] = []
 
     var body: some View {
         VStack {
@@ -18,12 +17,13 @@ struct MainView: View {
             GetLinkView() { urlString in
                 dataController.getDataFromURL(string: urlString)
             }
+//            Button { dataController.createTestJson() } label: { Text("Create test json")}
 
             switch dataController.itemTypes {
             case .bags:
                 BagsPropertiesView(bagEditData: $dataController.bagData)
             case .cloth:
-                SizePropertiesCreationView(sizeData: sizesData)
+                SizePropertiesCreationView(sizeData: $dataController.sizesData)
             case .none:
                 EmptyView()
             }
