@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F29879E2C18DA6D00B2746F /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 4F29879D2C18DA6D00B2746F /* SwiftXLSX */; };
 		4F2987B32C1A627000B2746F /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2987B22C1A627000B2746F /* MainModel.swift */; };
 		4F2987B72C1A649E00B2746F /* bigJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F2987B42C1A649E00B2746F /* bigJSON.json */; };
 		4F2987B82C1A649E00B2746F /* forth.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F2987B52C1A649E00B2746F /* forth.json */; };
@@ -40,6 +39,7 @@
 		4F914B192C24E2BE00821CCA /* BagsPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */; };
 		4F914B1B2C24F42300821CCA /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1A2C24F42300821CCA /* ModelConverter.swift */; };
 		4F914B1E2C25C04500821CCA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1D2C25C04500821CCA /* DataController.swift */; };
+		4FA7F66A2C2D572C00F199E8 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7F6692C2D572C00F199E8 /* ZipArchive */; };
 		4FA88FD32C2AF8C600141BA2 /* example.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC42C2AF8C600141BA2 /* example.xlsx */; };
 		4FA88FD42C2AF8C600141BA2 /* screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC52C2AF8C600141BA2 /* screen1.png */; };
 		4FA88FD52C2AF8C600141BA2 /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC62C2AF8C600141BA2 /* screen2.png */; };
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F29879E2C18DA6D00B2746F /* SwiftXLSX in Frameworks */,
+				4FA7F66A2C2D572C00F199E8 /* ZipArchive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +340,7 @@
 			);
 			name = Parser1688InfoToExcel;
 			packageProductDependencies = (
-				4F29879D2C18DA6D00B2746F /* SwiftXLSX */,
+				4FA7F6692C2D572C00F199E8 /* ZipArchive */,
 			);
 			productName = testJSON;
 			productReference = 4F40FC882C167BBE00AEB662 /* Parser1688InfoToExcel.app */;
@@ -415,7 +415,7 @@
 			);
 			mainGroup = 4F40FC7F2C167BBE00AEB662;
 			packageReferences = (
-				4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */,
+				4FA7F6682C2D572C00F199E8 /* XCRemoteSwiftPackageReference "ZipArchive" */,
 			);
 			productRefGroup = 4F40FC892C167BBE00AEB662 /* Products */;
 			projectDirPath = "";
@@ -822,21 +822,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */ = {
+		4FA7F6682C2D572C00F199E8 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/3973770/SwiftXLSX";
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F29879D2C18DA6D00B2746F /* SwiftXLSX */ = {
+		4FA7F6692C2D572C00F199E8 /* ZipArchive */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4F29879C2C18D94A00B2746F /* XCRemoteSwiftPackageReference "SwiftXLSX" */;
-			productName = SwiftXLSX;
+			package = 4FA7F6682C2D572C00F199E8 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

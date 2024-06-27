@@ -1,5 +1,4 @@
 import AppKit
-import SwiftXLSX
 
 class XLCreator {
 //    func createExcelFile(from model: BagModel, images: [Data], id: String) {
