@@ -16,8 +16,14 @@ class NetworkController {
 //    ]
 
     // erh acc
+//    let headers = [
+//        "x-rapidapi-key": "aad9606530msh49a540a057765d4p1385c5jsnb5950c2e1466",
+//        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
+//    ]
+
+    // svob acc
     let headers = [
-        "x-rapidapi-key": "aad9606530msh49a540a057765d4p1385c5jsnb5950c2e1466",
+        "x-rapidapi-key": "58390e5047mshdde8016dac6efeap104fbcjsn53165a6e1f8d",
         "x-rapidapi-host": "1688-product2.p.rapidapi.com"
     ]
 

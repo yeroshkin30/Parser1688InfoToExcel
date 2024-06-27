@@ -17,7 +17,7 @@ struct MainView: View {
             GetLinkView() { urlString in
                 dataController.getDataFromURL(string: urlString)
             }
-//            Button { dataController.createTestJson() } label: { Text("Create test json")}
+            Button { dataController.createTestJson() } label: { Text("Create test json")}
 
             switch dataController.itemTypes {
             case .bags:
@@ -28,7 +28,7 @@ struct MainView: View {
                 EmptyView()
             }
 
-            if let _ = dataController.convertedModel {
+            if let _ = dataController.convertedModel, dataController.itemTypes != .none {
                 Button { dataController.createXLFile() } label: {
                     Text("Create XL File")
                         .foregroundColor(.white)

@@ -29,6 +29,7 @@ class DataController {
         itemTypes = .none
         Task {
             do {
+                itemTypes = .none
                 let model: MainModel = try await networkController.getMainModel(from: string)
                 loadingState = .loading("Converting model")
                 let convertedModel: DataModelConverted = try await modelHandler.convert(from: model.data)
@@ -37,8 +38,8 @@ class DataController {
                     fabricChinese: convertedModel.productProperties.fabricForBags,
                     strapsData: convertedModel.productProperties.straps
                 )
-                sizesData = getUniqueSizeData(from: convertedModel.itemsByColor).sorted { $0.sizeInfo.sizeLetter.rawValue < $1.sizeInfo.sizeLetter.rawValue }
-                itemTypes = .cloth
+//                sizesData = getUniqueSizeData(from: convertedModel.itemsByColor).sorted { $0.sizeInfo.sizeLetter.rawValue < $1.sizeInfo.sizeLetter.rawValue }
+                itemTypes = .bags
                 self.convertedModel = convertedModel
             } catch {
                 print(error)
@@ -52,27 +53,27 @@ class DataController {
         itemTypes = .none
         setupModels()
     }
-//    func createXLFile() {
-//        guard let convertedModel else { return }
-//        let bagModel: BagModel = createBagModel(from: convertedModel, bagData: bagData)
-//
-//        loadingState = .loading("Creating XL file")
-//        Task {
-////            xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
-//            loadingState = .loaded("XL file was created")
-//        }
-//    }
-
     func createXLFile() {
         guard let convertedModel else { return }
-        let clothModel: ClothModel = createClothModel(from: convertedModel, sizeData: sizesData)
+        let bagModel: BagModel = createBagModel(from: convertedModel, bagData: bagData)
 
         loadingState = .loading("Creating XL file")
         Task {
-            xlCreator.createExcelFile(from: clothModel, images: clothModel.images, id: String(convertedModel.id))
+            xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
             loadingState = .loaded("XL file was created")
         }
     }
+
+//    func createXLFile() {
+//        guard let convertedModel else { return }
+//        let clothModel: ClothModel = createClothModel(from: convertedModel, sizeData: sizesData)
+//
+//        loadingState = .loading("Creating XL file")
+//        Task {
+//            xlCreator.createExcelFile(from: clothModel, images: clothModel.images, id: String(convertedModel.id))
+//            loadingState = .loaded("XL file was created")
+//        }
+//    }
 
     func setupModels() {
 

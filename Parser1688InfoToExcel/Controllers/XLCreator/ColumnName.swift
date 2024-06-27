@@ -20,27 +20,27 @@ enum ColumnName: Int {
     case quantity = 10
     case price = 11
 
-    case length = 12
-    case shoulders = 13
-    case bust = 14
-    case waist = 15
-    case hips = 16
-    case sleeve = 17
-    case weight = 18
-
-    case compositionChinese = 21
-    case fabric = 22
-    case season = 35
-    case link = 36
+//    case length = 12
+//    case shoulders = 13
+//    case bust = 14
+//    case waist = 15
+//    case hips = 16
+//    case sleeve = 17
+//    case weight = 18
+//
+//    case compositionChinese = 21
+//    case fabric = 22
+//    case season = 35
+//    case link = 36
 
 
 
     //bags
-//    case weight = 13
-//    case bagSize = 14
-//    case compositionChinese = 15
-//    case fabric = 16
-//    case straps = 20
-//    case link = 21
+    case weight = 13
+    case bagSize = 14
+    case compositionChinese = 15
+    case fabric = 16
+    case straps = 20
+    case link = 21
 
 }
