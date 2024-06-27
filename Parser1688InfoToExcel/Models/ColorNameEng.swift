@@ -12,7 +12,7 @@ enum ColorNameEng: String, CaseIterable {
     case black = "黑色"
     case black2 = "黑颜色"
 
-    case  yellow = "黄色"
+    case yellow = "黄色"
 
     case green = "绿色"
     case green2 = "绿颜色"
@@ -35,25 +35,36 @@ enum ColorNameEng: String, CaseIterable {
     case milkyWhite = "奶白"
     case coffeeWhite = "奶咖色"
 
-    case gray = "灰色"
+    case grey = "灰色"
     case lightPurple = "淡紫"
     case mingGreen = "薄荷绿"
     case champane = "香槟"
     case brown = "咖啡"
+    case brown2 = "棕色"
     case beige = "肤色"
-    case beige2 = "卡其色"
 
-    //    黑色, 黑，黑颜色  black
-    //              黄色，黄，黄颜色 yellow
-    //              绿色，绿，绿颜色 green
-    //              紫色，  紫， 紫颜色 purple
-    //              粉红色，粉， 粉红  pink
-    //              红色， 红，红颜色 red
-    //              蓝色， 蓝， 蓝颜色blue
-    //              金色 ，  金黄色，金，金颜色golden
-    //              橘色， 橘，橘颜色 orange
-    //              米白 ，米白色creamy white
-    //              杏色 ，杏，杏颜色apricot
+    case wineBrown = "酒咖色"
+    case wineBrown2 = "酒咖啡色"
+
+    case sunsetYellow = "日落黄色"
+    case sunsetYellow2 = "日落黄"
+
+    case smokyBlue = "烟蓝色"
+    case caramel = "焦糖色"
+    case hazeBlue = "雾霾蓝"
+    case darkBrown = "深棕色"
+    case almondGreen = "杏仁绿色"
+    case elephantGrey = "大象灰色"
+
+    case khaki = "卡其"
+    case khaki2 = "卡其色"
+
+    case bananaGreen = "香蕉绿色"
+    case burgundy = "酒红色"
+    case royalBlue = "宝蓝色"
+    case darkGreen = "墨绿色"
+    case lightGreen = "浅绿色"
+
     var colorNameEng: String {
         switch self {
         case .black, .black2:
@@ -80,8 +91,8 @@ enum ColorNameEng: String, CaseIterable {
             return "Apricot"
         case .white:
             return "White"
-        case .gray:
-            return "Gray"
+        case .grey:
+            return "Grey"
         case .milkyWhite:
             return "Milky white"
         case .coffeeWhite:
@@ -92,14 +103,40 @@ enum ColorNameEng: String, CaseIterable {
             return "Mint green"
         case .champane:
             return "Champane"
-        case .brown:
+        case .brown, .brown2:
             return "Brown"
         case .beige:
             return "Beige"
-        case .beige2:
-            return "Beige"
         case .noName:
             return "No name"
+        case .wineBrown, .wineBrown2:
+            return "Wine Brown"
+        case .sunsetYellow, .sunsetYellow2:
+            return "Sunset Yellow"
+        case .smokyBlue:
+            return "Smoky Blue"
+        case .caramel:
+            return "Caramel"
+        case .hazeBlue:
+            return "Haze Blue"
+        case .darkBrown:
+            return "Dark Brown"
+        case .almondGreen:
+            return "Almond Green"
+        case .elephantGrey:
+            return "Elephant Grey"
+        case .khaki, .khaki2:
+            return "Khaki"
+        case .bananaGreen:
+            return "Banana Green"
+        case .burgundy:
+            return "Burgundy"
+        case .royalBlue:
+            return "Royal Blue"
+        case .darkGreen:
+            return "Dark Green"
+        case .lightGreen:
+            return "Light Green"
         }
     }
 }

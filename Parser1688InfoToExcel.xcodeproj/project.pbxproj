@@ -40,6 +40,18 @@
 		4F914B192C24E2BE00821CCA /* BagsPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */; };
 		4F914B1B2C24F42300821CCA /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1A2C24F42300821CCA /* ModelConverter.swift */; };
 		4F914B1E2C25C04500821CCA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F914B1D2C25C04500821CCA /* DataController.swift */; };
+		4FA88FD32C2AF8C600141BA2 /* example.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC42C2AF8C600141BA2 /* example.xlsx */; };
+		4FA88FD42C2AF8C600141BA2 /* screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC52C2AF8C600141BA2 /* screen1.png */; };
+		4FA88FD52C2AF8C600141BA2 /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC62C2AF8C600141BA2 /* screen2.png */; };
+		4FA88FD62C2AF8C600141BA2 /* screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC72C2AF8C600141BA2 /* screen3.png */; };
+		4FA88FD72C2AF8C600141BA2 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA88FC92C2AF8C600141BA2 /* icons.xcassets */; };
+		4FA88FD82C2AF8C600141BA2 /* SwiftXlsx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCA2C2AF8C600141BA2 /* SwiftXlsx.swift */; };
+		4FA88FD92C2AF8C600141BA2 /* XCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCB2C2AF8C600141BA2 /* XCell.swift */; };
+		4FA88FDA2C2AF8C600141BA2 /* XFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCC2C2AF8C600141BA2 /* XFontName.swift */; };
+		4FA88FDB2C2AF8C600141BA2 /* XImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCD2C2AF8C600141BA2 /* XImage.swift */; };
+		4FA88FDC2C2AF8C600141BA2 /* XSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCE2C2AF8C600141BA2 /* XSheet.swift */; };
+		4FA88FDD2C2AF8C600141BA2 /* Xtools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FCF2C2AF8C600141BA2 /* Xtools.swift */; };
+		4FA88FDE2C2AF8C600141BA2 /* XWorkBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA88FD02C2AF8C600141BA2 /* XWorkBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +107,18 @@
 		4F914B182C24E2BE00821CCA /* BagsPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagsPropertiesView.swift; sourceTree = "<group>"; };
 		4F914B1A2C24F42300821CCA /* ModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConverter.swift; sourceTree = "<group>"; };
 		4F914B1D2C25C04500821CCA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4FA88FC42C2AF8C600141BA2 /* example.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.xlsx; sourceTree = "<group>"; };
+		4FA88FC52C2AF8C600141BA2 /* screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen1.png; sourceTree = "<group>"; };
+		4FA88FC62C2AF8C600141BA2 /* screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen2.png; sourceTree = "<group>"; };
+		4FA88FC72C2AF8C600141BA2 /* screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen3.png; sourceTree = "<group>"; };
+		4FA88FC92C2AF8C600141BA2 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icons.xcassets; sourceTree = "<group>"; };
+		4FA88FCA2C2AF8C600141BA2 /* SwiftXlsx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftXlsx.swift; sourceTree = "<group>"; };
+		4FA88FCB2C2AF8C600141BA2 /* XCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCell.swift; sourceTree = "<group>"; };
+		4FA88FCC2C2AF8C600141BA2 /* XFontName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFontName.swift; sourceTree = "<group>"; };
+		4FA88FCD2C2AF8C600141BA2 /* XImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XImage.swift; sourceTree = "<group>"; };
+		4FA88FCE2C2AF8C600141BA2 /* XSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSheet.swift; sourceTree = "<group>"; };
+		4FA88FCF2C2AF8C600141BA2 /* Xtools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xtools.swift; sourceTree = "<group>"; };
+		4FA88FD02C2AF8C600141BA2 /* XWorkBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWorkBook.swift; sourceTree = "<group>"; };
 		4FDFA1072C25F21E009EF1DD /* Parser1688InfoToExcel.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Parser1688InfoToExcel.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +255,7 @@
 				4F3F45FD2C25F55A0079C693 /* Extensions */,
 				4F3F45FC2C25F54A0079C693 /* JSON Files */,
 				4FDFA1072C25F21E009EF1DD /* Parser1688InfoToExcel.entitlements */,
+				4FA88FD22C2AF8C600141BA2 /* Sources */,
 				4F40FC8F2C167BBF00AEB662 /* Assets.xcassets */,
 			);
 			path = Parser1688InfoToExcel;
@@ -260,6 +285,42 @@
 				4F2988512C21D0F600B2746F /* SizeData.swift */,
 			);
 			path = Size;
+			sourceTree = "<group>";
+		};
+		4FA88FC82C2AF8C600141BA2 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				4FA88FC42C2AF8C600141BA2 /* example.xlsx */,
+				4FA88FC52C2AF8C600141BA2 /* screen1.png */,
+				4FA88FC62C2AF8C600141BA2 /* screen2.png */,
+				4FA88FC72C2AF8C600141BA2 /* screen3.png */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		4FA88FD12C2AF8C600141BA2 /* SwiftXLSX */ = {
+			isa = PBXGroup;
+			children = (
+				4FA88FC92C2AF8C600141BA2 /* icons.xcassets */,
+				4FA88FCA2C2AF8C600141BA2 /* SwiftXlsx.swift */,
+				4FA88FCB2C2AF8C600141BA2 /* XCell.swift */,
+				4FA88FCC2C2AF8C600141BA2 /* XFontName.swift */,
+				4FA88FCD2C2AF8C600141BA2 /* XImage.swift */,
+				4FA88FCE2C2AF8C600141BA2 /* XSheet.swift */,
+				4FA88FCF2C2AF8C600141BA2 /* Xtools.swift */,
+				4FA88FD02C2AF8C600141BA2 /* XWorkBook.swift */,
+			);
+			path = SwiftXLSX;
+			sourceTree = "<group>";
+		};
+		4FA88FD22C2AF8C600141BA2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4FA88FC82C2AF8C600141BA2 /* Sample */,
+				4FA88FD12C2AF8C600141BA2 /* SwiftXLSX */,
+			);
+			name = Sources;
+			path = "../../../../Downloads/SwiftXLSX-main/Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,11 +433,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA88FD52C2AF8C600141BA2 /* screen2.png in Resources */,
+				4FA88FD62C2AF8C600141BA2 /* screen3.png in Resources */,
 				4F2987B92C1A649E00B2746F /* third.json in Resources */,
+				4FA88FD42C2AF8C600141BA2 /* screen1.png in Resources */,
+				4FA88FD72C2AF8C600141BA2 /* icons.xcassets in Resources */,
 				4F2987B72C1A649E00B2746F /* bigJSON.json in Resources */,
 				4F2987B82C1A649E00B2746F /* forth.json in Resources */,
 				4F40FCBB2C167D2600AEB662 /* bags.json in Resources */,
 				4F40FC902C167BBF00AEB662 /* Assets.xcassets in Resources */,
+				4FA88FD32C2AF8C600141BA2 /* example.xlsx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA88FDE2C2AF8C600141BA2 /* XWorkBook.swift in Sources */,
+				4FA88FDD2C2AF8C600141BA2 /* Xtools.swift in Sources */,
 				4F914B172C24BE2900821CCA /* DataModelConverted.swift in Sources */,
 				4F2987BF2C1B87B700B2746F /* ColorNameEng.swift in Sources */,
 				4F6032962C1741130074FCD5 /* XLCreator.swift in Sources */,
@@ -411,18 +479,23 @@
 				4F2988B72C2446EA00B2746F /* MainView.swift in Sources */,
 				4F2987BD2C1B834800B2746F /* TEST JSON.swift in Sources */,
 				4F914B0F2C24680A00821CCA /* SizePropertiesCreationView.swift in Sources */,
+				4FA88FD92C2AF8C600141BA2 /* XCell.swift in Sources */,
 				4F40FC8E2C167BBE00AEB662 /* ViewController.swift in Sources */,
 				4F2988B52C2446C800B2746F /* App.swift in Sources */,
 				4F3F45FB2C25F5010079C693 /* BagModel.swift in Sources */,
+				4FA88FDB2C2AF8C600141BA2 /* XImage.swift in Sources */,
 				4F29887C2C2436CE00B2746F /* ColumnName.swift in Sources */,
 				4F914B1B2C24F42300821CCA /* ModelConverter.swift in Sources */,
 				4F2987BB2C1A6A3A00B2746F /* DataModel.swift in Sources */,
 				4F2987B32C1A627000B2746F /* MainModel.swift in Sources */,
+				4FA88FDC2C2AF8C600141BA2 /* XSheet.swift in Sources */,
 				4F914B132C24AB0C00821CCA /* ItemByColor.swift in Sources */,
 				4F40FCB72C167C2000AEB662 /* Network.swift in Sources */,
+				4FA88FDA2C2AF8C600141BA2 /* XFontName.swift in Sources */,
 				4F40FCBD2C167D5900AEB662 /* ItemType.swift in Sources */,
 				4F914B112C2497CC00821CCA /* Extension+String.swift in Sources */,
 				4F2988B92C24540200B2746F /* GetLinkView.swift in Sources */,
+				4FA88FD82C2AF8C600141BA2 /* SwiftXlsx.swift in Sources */,
 				4F2988502C21B3CA00B2746F /* SizeInfo.swift in Sources */,
 				4F914B192C24E2BE00821CCA /* BagsPropertiesView.swift in Sources */,
 			);

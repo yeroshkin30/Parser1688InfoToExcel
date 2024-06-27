@@ -108,12 +108,17 @@ private extension ModelConverter {
 
 
     func getPhotoByColor(from itemWithColor: SKUValue) async -> PhotoByColor? {
-        if let imageURL = itemWithColor.imageUrl,
-           let imageData = try? await getImageData(from: URL(string: imageURL)!) {
-
-            return PhotoByColor(colorChinese: itemWithColor.name, imageData: imageData)
-        } else {
-            print("Cant get image from URL photo by color")
+        do {
+            if let imageURL = itemWithColor.imageUrl,
+               let url = URL(string: imageURL) {
+                let imageData = try await getImageData(from: url)
+                return PhotoByColor(colorChinese: itemWithColor.name, imageData: imageData)
+            } else {
+                print("Cant create url from URLString in photo by color")
+                return nil
+            }
+        } catch {
+            print(error)
             return nil
         }
     }

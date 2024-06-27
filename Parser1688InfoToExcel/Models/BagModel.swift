@@ -11,7 +11,7 @@ struct BagModel {
     let title: String?
     let images: [Data]
     let article: String
-    let aritcleAndColorSku: String?
+    let articleAndColorSku: String?
     let productName: String? // dress
     let price: String
 
@@ -28,7 +28,7 @@ struct ClothModel {
     let title: String?
     let images: [Data]
     let article: String
-    let aritcleAndColorSku: String?
+    let articleAndColorSku: String?
     let productName: String? // dress
     let price: String
 
