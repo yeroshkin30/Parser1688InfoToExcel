@@ -40,10 +40,32 @@ private extension ModelConverter {
     //      "props_names": "海洋蓝;175/100A(L)",
     //      "props_ids": "0:5;1:2"
     //    },
-    func transformPropertiesByItem(from propertiesByItem: [[String: String]], photosByColor: [PhotoByColor]) -> [ItemByColor] {
+    func transformPropertiesByItem(from propertiesByItem: [[String: StringOrInt]], photosByColor: [PhotoByColor]) -> [ItemByColor] {
+//        let filteredArray: [[String: String]] = propertiesByItem.compactMap { dictionary in
+//            let nonNilDictionary = dictionary.compactMapValues { $0 }
+//            return nonNilDictionary.count == dictionary.count ? nonNilDictionary : nil
+//        }
+        // Define a method to convert StringOrInt to String
+         func stringFromStringOrInt(_ value: StringOrInt) -> String {
+             switch value {
+             case .string(let stringValue):
+                 return stringValue
+             case .int(let intValue):
+                 return String(intValue)
+             }
+         }
+
+         // Filter and convert dictionaries
+         let filteredArray: [[String: String]] = propertiesByItem.compactMap { dictionary in
+             var nonNilDictionary: [String: String] = [:]
+             for (key, value) in dictionary {
+                 nonNilDictionary[key] = stringFromStringOrInt(value)
+             }
+             return nonNilDictionary
+         }
 
         var itemModels: [ItemWithColorSize] = []
-        for property in propertiesByItem {
+        for property in filteredArray {
             let quantity = property[Keys.itemAmount.rawValue] ?? "No amount"
             let colorAndSizeString = property[Keys.propNames.rawValue] ?? "No prop names"
 
