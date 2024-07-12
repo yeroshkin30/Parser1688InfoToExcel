@@ -14,15 +14,16 @@ class DataController {
 
     var itemTypes: ItemTypes = .none
     var loadingState: LoadingState = .loaded("Enter link")
+    var convertedModel: DataModelConverted?
+    var bagData: BagEditData = .init()
+    var sizesData: [SizeData] = []
+
     // MARK: - Private properties
 
     private let networkController: NetworkController = .init()
     private let xlCreator: XLCreator = .init()
     private let modelHandler: ModelConverter = .init()
 
-    var convertedModel: DataModelConverted?
-    var bagData: BagEditData = .init()
-    var sizesData: [SizeData] = []
 
     func getDataFromURL(string: String) {
         currentLink = string
@@ -38,8 +39,8 @@ class DataController {
                     fabricChinese: convertedModel.productProperties.fabricForBags,
                     strapsData: convertedModel.productProperties.straps
                 )
-//                sizesData = getUniqueSizeData(from: convertedModel.itemsByColor).sorted { $0.sizeInfo.sizeLetter.rawValue < $1.sizeInfo.sizeLetter.rawValue }
-                itemTypes = .bags
+                sizesData = getUniqueSizeData(from: convertedModel.itemsByColor).sorted { $0.sizeInfo.sizeLetter.rawValue < $1.sizeInfo.sizeLetter.rawValue }
+                itemTypes = .cloth
                 self.convertedModel = convertedModel
             } catch {
                 print(error)
@@ -53,27 +54,27 @@ class DataController {
         itemTypes = .none
         setupModels()
     }
-    func createXLFile() {
-        guard let convertedModel else { return }
-        let bagModel: BagModel = createBagModel(from: convertedModel, bagData: bagData)
-
-        loadingState = .loading("Creating XL file")
-        Task {
-            xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
-            loadingState = .loaded("XL file was created")
-        }
-    }
-
 //    func createXLFile() {
 //        guard let convertedModel else { return }
-//        let clothModel: ClothModel = createClothModel(from: convertedModel, sizeData: sizesData)
+//        let bagModel: BagModel = createBagModel(from: convertedModel, bagData: bagData)
 //
 //        loadingState = .loading("Creating XL file")
 //        Task {
-//            xlCreator.createExcelFile(from: clothModel, images: clothModel.images, id: String(convertedModel.id))
+//            xlCreator.createExcelFile(from: bagModel, images: bagModel.images, id: String(convertedModel.id))
 //            loadingState = .loaded("XL file was created")
 //        }
 //    }
+
+    func createXLFile() {
+        guard let convertedModel else { return }
+        let clothModel: ClothModel = createClothModel(from: convertedModel, sizeData: sizesData)
+
+        loadingState = .loading("Creating XL file")
+        Task {
+            xlCreator.createExcelFile(from: clothModel, images: clothModel.images, id: String(convertedModel.id))
+            loadingState = .loaded("XL file was created")
+        }
+    }
 
     func setupModels() {
 
@@ -153,15 +154,15 @@ class DataController {
             }
         }
     }
+
+    enum ItemTypes {
+        case bags
+        case cloth
+        case none
+    }
 }
 
 enum LoadingState {
     case loading(String)
     case loaded(String)
-}
-
-enum ItemTypes {
-    case bags
-    case cloth
-    case none
 }

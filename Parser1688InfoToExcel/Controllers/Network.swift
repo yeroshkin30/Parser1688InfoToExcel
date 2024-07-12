@@ -4,10 +4,10 @@ import AppKit
 class NetworkController {
 
     private let session: URLSession
-//    private let headers = [
-//        "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
-//        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
-//    ]
+    private let headers = [
+        "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
+        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
+    ]
 
     // Jurist acc
 //    let headers = [
@@ -22,10 +22,10 @@ class NetworkController {
 //    ]
 
     // svob acc
-    let headers = [
-        "x-rapidapi-key": "58390e5047mshdde8016dac6efeap104fbcjsn53165a6e1f8d",
-        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
-    ]
+//    let headers = [
+//        "x-rapidapi-key": "58390e5047mshdde8016dac6efeap104fbcjsn53165a6e1f8d",
+//        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
+//    ]
 
     init() {
         let configuration = URLSessionConfiguration.default

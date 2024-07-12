@@ -41,11 +41,7 @@ private extension ModelConverter {
     //      "props_ids": "0:5;1:2"
     //    },
     func transformPropertiesByItem(from propertiesByItem: [[String: StringOrInt]], photosByColor: [PhotoByColor]) -> [ItemByColor] {
-//        let filteredArray: [[String: String]] = propertiesByItem.compactMap { dictionary in
-//            let nonNilDictionary = dictionary.compactMapValues { $0 }
-//            return nonNilDictionary.count == dictionary.count ? nonNilDictionary : nil
-//        }
-        // Define a method to convert StringOrInt to String
+
          func stringFromStringOrInt(_ value: StringOrInt) -> String {
              switch value {
              case .string(let stringValue):
