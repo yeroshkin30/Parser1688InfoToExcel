@@ -12,7 +12,7 @@ struct PhotosDownloadView: View {
     @Binding var photosURL: [URL]
     let productArticle: String
     @State private var selectedPhotoData: ImageData?
-    let imageSaver: ImageSaveController = .init()
+    private let imageSaver: ImageSaveController = .init()
 
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct PhotosDownloadView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 ChangePhotoNameView(article: productArticle) { name in
                     guard let selectedPhotoData else { return }
-                    imageSaver.saveImage( image: selectedPhotoData.image,name: name)
+                    imageSaver.saveImage(image: selectedPhotoData.image,name: name, article: productArticle)
                 }
             }
 

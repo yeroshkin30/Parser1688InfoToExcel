@@ -9,13 +9,23 @@ import AppKit
 
 class ImageSaveController {
 
-    func saveImage(image: NSImage, name: String) {
+    func saveImage(image: NSImage, name: String, article: String) {
 
-        guard let directoryPath = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
+        guard let downloadsDirectory = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
              print("Error accessing Downloads directory")
              return
          }
-        let filePath = directoryPath.appendingPathComponent("\(name).png")
+
+        let articleDirectory = downloadsDirectory.appendingPathComponent(article)
+           do {
+               try FileManager.default.createDirectory(at: articleDirectory, withIntermediateDirectories: true, attributes: nil)
+               print("Folder created or already exists at: \(articleDirectory.path)")
+           } catch {
+               print("Error creating folder: \(error.localizedDescription)")
+               return
+        }
+
+        let filePath = articleDirectory.appendingPathComponent("\(name).png")
 
         guard let tiffData = image.tiffRepresentation,
               let bitmapImage = NSBitmapImageRep(data: tiffData) else {
@@ -35,5 +45,4 @@ class ImageSaveController {
             print("Error saving image: \(error.localizedDescription)")
         }
     }
-
 }
