@@ -23,6 +23,7 @@ struct PhotosDownloadView: View {
                     guard let selectedPhotoData else { return }
                     imageSaver.saveImage(image: selectedPhotoData.image,name: name, article: productArticle)
                 }
+                .padding(.horizontal, 30)
             }
 
             ScrollView(.horizontal) {
