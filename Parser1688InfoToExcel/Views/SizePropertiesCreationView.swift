@@ -24,14 +24,14 @@ struct SizePropertiesCreationView: View {
 
         VStack(alignment: .leading) {
 
-            let columnWidth: CGFloat = 100
+            let columnWidth: CGFloat = 70
 
             HStack(spacing: 10) {
                 ForEach(propertiesName, id: \.self) { propName in
                     Text(propName)
                         .frame(width: columnWidth)
                         .padding(.vertical, 5)
-                        .background(Color.gray, in: RoundedRectangle(cornerRadius: 15))
+                        .font(.system(.headline))
                 }
             }
             VStack {
@@ -39,14 +39,9 @@ struct SizePropertiesCreationView: View {
                     SizeStackViews(sizeData: sizeDataSingle, columnWidth: columnWidth)
                 }
             }
-            Button {
-                // Your action here
-            } label: {
-                Text("Create Size Data")
-            }
         }
         .padding()
-        .background(.pink.opacity(0.2))
+        .background(.gray.opacity(0.2))
     }
 }
 
@@ -58,17 +53,17 @@ struct SizeStackViews: View {
         HStack(spacing: 10) {
             Text(sizeData.sizeInfo.sizeLetter.value)
                 .frame(width: columnWidth)
-            TextField("Product length", text: $sizeData.sizeProperties.length)
+            TextField("", text: $sizeData.sizeProperties.length)
                 .frame(width: columnWidth)
-            TextField("Shoulders length", text: $sizeData.sizeProperties.shoulder)
+            TextField("", text: $sizeData.sizeProperties.shoulder)
                 .frame(width: columnWidth)
-            TextField("Bust", text: $sizeData.sizeProperties.bust)
+            TextField("", text: $sizeData.sizeProperties.bust)
                 .frame(width: columnWidth)
-            TextField("Waist", text: $sizeData.sizeProperties.waist)
+            TextField("", text: $sizeData.sizeProperties.waist)
                 .frame(width: columnWidth)
-            TextField("Hips", text: $sizeData.sizeProperties.hips)
+            TextField("", text: $sizeData.sizeProperties.hips)
                 .frame(width: columnWidth)
-            TextField("Hips", text: $sizeData.sizeProperties.sleeve)
+            TextField("", text: $sizeData.sizeProperties.sleeve)
                 .frame(width: columnWidth)
         }
     }

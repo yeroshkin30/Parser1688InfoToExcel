@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ColumnName: Int {
+enum ColumnNameForCloth: Int {
     case brand = 1
     case image = 2
     case article = 3
@@ -32,15 +32,25 @@ enum ColumnName: Int {
     case fabric = 22
     case season = 35
     case link = 36
+}
 
+enum ColumnNameForBags: Int {
+    case brand = 1
+    case image = 2
+    case article = 3
+    case sku = 4
+    case itemName = 5
+    case product = 6
+    case colorChinese = 7
+    case colorEng = 8
+    case size = 9
+    case quantity = 10
+    case price = 11
 
-
-    //bags
-//    case weight = 13
-//    case bagSize = 14
-//    case compositionChinese = 15
-//    case fabric = 16
-//    case straps = 20
-//    case link = 21
-
+    case weight = 13
+    case bagSize = 14
+    case compositionChinese = 15
+    case fabric = 16
+    case straps = 20
+    case link = 21
 }

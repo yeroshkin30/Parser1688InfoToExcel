@@ -1,0 +1,390 @@
+{
+  "result": {
+    "status": {
+      "msg": "success",
+      "code": 200,
+      "execution_time": "0.5345"
+    },
+    "item": {
+      "num_iid": "788584056468",
+      "title": "亦止男装英伦风休闲五分西裤男夏季新款半松紧腰宽松百搭西装短裤",
+      "total_sales": "40",
+      "cat_id": "10165",
+      "root_cat_id": "201564521",
+      "detail_url": "https://detail.1688.com/offer/788584056468.html",
+      "images": [
+        "https://cbu01.alicdn.com/img/ibank/O1CN01yqNphy1PJbnAzq4YK_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01NVzV4j1PJbn9xCXs8_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01Esja241PJbnB8wL6c_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01INIsBn1PJbn7FOdqB_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01hel1bC1PJbn82jpdQ_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01QSSbG71PJbn8cSfNr_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01N0icHu1PJbn8V5LOF_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN012Hc14c1PJbn79XVzb_!!3007911820-0-cib.jpg"
+      ],
+      "video_thumbnail": null,
+      "video": null,
+      "properties_cut": "货源类别 上市年份季节 面料名称 裤长 主面料成分 适用季节 颜色 有无质检报告 质检报告编号 尺码 原创设计货源 裤型 弹力 风格 主面料成分的含量 品牌 货号 上市年份/季节",
+      "properties": [
+        {
+          "name": "货源类别",
+          "value": "现货"
+        },
+        {
+          "name": "上市年份季节",
+          "value": "2023年夏季"
+        },
+        {
+          "name": "面料名称",
+          "value": "聚酯纤维"
+        },
+        {
+          "name": "裤长",
+          "value": "短裤"
+        },
+        {
+          "name": "主面料成分",
+          "value": "聚酯纤维（涤纶）"
+        },
+        {
+          "name": "适用季节",
+          "value": "夏季"
+        },
+        {
+          "name": "颜色",
+          "value": "卡其色,深灰色,黑色"
+        },
+        {
+          "name": "有无质检报告",
+          "value": "否"
+        },
+        {
+          "name": "质检报告编号",
+          "value": "其他"
+        },
+        {
+          "name": "尺码",
+          "value": "M,L,XL,2XL,3XL"
+        },
+        {
+          "name": "原创设计货源",
+          "value": "否"
+        },
+        {
+          "name": "裤型",
+          "value": "直筒型"
+        },
+        {
+          "name": "弹力",
+          "value": "微弹"
+        },
+        {
+          "name": "风格",
+          "value": "简约"
+        },
+        {
+          "name": "主面料成分的含量",
+          "value": "100"
+        },
+        {
+          "name": "品牌",
+          "value": "ACTIVECHO"
+        },
+        {
+          "name": "货号",
+          "value": "TXD949"
+        },
+        {
+          "name": "上市年份/季节",
+          "value": "2024年夏季"
+        }
+      ],
+      "desc_url": "https://g.alicdn.com/takla-group/app-detail/detail/p/index.html?url=https://itemcdn.tmall.com/1688offer/icoss70679415313f5bebeec62ddc3",
+      "desc_imgs": [
+        "https://cbu01.alicdn.com/img/ibank/O1CN01dyuWr31PJbn82tQjU_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01kWTneb1PJbn4RtXyT_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01eW5JNe1PJbn9kRVLz_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01Kkz30t1PJbnB960Wy_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01cVk3LS1PJbn4pKPMp_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01MOtlfr1PJbnAV8Xno_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01owOHnV1PJbnB94CFn_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01hBRNAR1PJbn8V9Ixg_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01WJwan71PJbnB96PUP_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01igOtuJ1PJbn8cVl0T_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01ipxgr41PJbnAV8by0_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01WGam9a1PJbn7FYRW5_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01o6Crcm1PJbn8cYRLG_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01Em3QNf1PJbn8V9N8o_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01hCeCN61PJbn6TD9lr_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01ijuiXQ1PJbn8V8ETQ_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01kU49YV1PJbn79bPaU_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN019v93Tg1PJbn8V9Zcf_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN011Av7CK1PJbn6TFhmP_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01QmZQmm1PJbn9S4u2C_!!3007911820-0-cib.jpg",
+        "https://cbu01.alicdn.com/img/ibank/O1CN01GHfCeQ1PJbn9kUWXL_!!3007911820-0-cib.jpg"
+      ],
+      "desc_items": [],
+      "saleInfo": {
+        "promotion_price": [
+          {
+            "startAmount": "2",
+            "price": "68.00"
+          },
+          {
+            "startAmount": "30",
+            "price": "63.00"
+          }
+        ],
+        "price": [],
+        "quantitySold": "745",
+        "minOrder": "2",
+        "unit": "套"
+      },
+      "skus": {
+        "0": {
+          "promotion_price": "￥63.00-￥68.00",
+          "quantity": "745"
+        },
+        "5549866922892": {
+          "quantity": "51",
+          "soldCount": "0"
+        },
+        "5549866922887": {
+          "quantity": "49",
+          "soldCount": "0"
+        },
+        "5549866922890": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922891": {
+          "quantity": "49",
+          "soldCount": "0"
+        },
+        "5549866922885": {
+          "quantity": "51",
+          "soldCount": "0"
+        },
+        "5549866922880": {
+          "quantity": "48",
+          "soldCount": "0"
+        },
+        "5549866922878": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922886": {
+          "quantity": "48",
+          "soldCount": "0"
+        },
+        "5549866922879": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922881": {
+          "quantity": "49",
+          "soldCount": "0"
+        },
+        "5549866922882": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922889": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922884": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922888": {
+          "quantity": "50",
+          "soldCount": "0"
+        },
+        "5549866922883": {
+          "quantity": "50",
+          "soldCount": "0"
+        }
+      },
+      "sku_base": {
+        "skus": [
+          {
+            "specsId": "b2c4d3c155d7e2c35840c13d2e2dd7ef",
+            "skuId": "5549866922892",
+            "propPath": "黑色;3XL"
+          },
+          {
+            "specsId": "39b8285517c7d6c917e5dcc25211f94b",
+            "skuId": "5549866922887",
+            "propPath": "深灰色;3XL"
+          },
+          {
+            "specsId": "71d88d8925e6da4254a8962f232be245",
+            "skuId": "5549866922890",
+            "propPath": "黑色;XL"
+          },
+          {
+            "specsId": "35c64334c591d842d187e6019e1e4176",
+            "skuId": "5549866922891",
+            "propPath": "黑色;2XL"
+          },
+          {
+            "specsId": "e5ad220e911f5a510812ef685f4cc119",
+            "skuId": "5549866922885",
+            "propPath": "深灰色;XL"
+          },
+          {
+            "specsId": "2c4ead55285ddf7a44a71de8a6da5cb9",
+            "skuId": "5549866922880",
+            "propPath": "卡其色;XL"
+          },
+          {
+            "specsId": "5b89c3979a8f52260cf6f9c6e7aa96f4",
+            "skuId": "5549866922878",
+            "propPath": "卡其色;M"
+          },
+          {
+            "specsId": "e8ac0bd03b66d0ff0f418f24793e957e",
+            "skuId": "5549866922886",
+            "propPath": "深灰色;2XL"
+          },
+          {
+            "specsId": "9d7c8634a84f8fd3f373513d530bf1a4",
+            "skuId": "5549866922879",
+            "propPath": "卡其色;L"
+          },
+          {
+            "specsId": "7f8e81d9ed51a771fada93fd292a71d9",
+            "skuId": "5549866922881",
+            "propPath": "卡其色;2XL"
+          },
+          {
+            "specsId": "83a7891e26299a9740299f3fc427f608",
+            "skuId": "5549866922882",
+            "propPath": "卡其色;3XL"
+          },
+          {
+            "specsId": "5e24a785a18cd9c73d3e52d5ba583539",
+            "skuId": "5549866922889",
+            "propPath": "黑色;L"
+          },
+          {
+            "specsId": "eeb7b635970ecc7450bf8d6c740bab34",
+            "skuId": "5549866922884",
+            "propPath": "深灰色;L"
+          },
+          {
+            "specsId": "65a501b1dd1d89457157e681ff26104e",
+            "skuId": "5549866922888",
+            "propPath": "黑色;M"
+          },
+          {
+            "specsId": "f21eaff679004e3a0d10f95c2bce21e7",
+            "skuId": "5549866922883",
+            "propPath": "深灰色;M"
+          }
+        ],
+        "props": [
+          {
+            "name": "颜色",
+            "values": [
+              {
+                "vid": "卡其色",
+                "name": "卡其色",
+                "image": "https://cbu01.alicdn.com/img/ibank/O1CN012Hc14c1PJbn79XVzb_!!3007911820-0-cib.jpg"
+              },
+              {
+                "vid": "深灰色",
+                "name": "深灰色",
+                "image": "https://cbu01.alicdn.com/img/ibank/O1CN01QSSbG71PJbn8cSfNr_!!3007911820-0-cib.jpg"
+              },
+              {
+                "vid": "黑色",
+                "name": "黑色",
+                "image": "https://cbu01.alicdn.com/img/ibank/O1CN01N0icHu1PJbn8V5LOF_!!3007911820-0-cib.jpg"
+              }
+            ]
+          },
+          {
+            "name": "尺码",
+            "values": [
+              {
+                "vid": "M",
+                "name": "M"
+              },
+              {
+                "vid": "L",
+                "name": "L"
+              },
+              {
+                "vid": "XL",
+                "name": "XL"
+              },
+              {
+                "vid": "2XL",
+                "name": "2XL"
+              },
+              {
+                "vid": "3XL",
+                "name": "3XL"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "from": "广东省 广州市",
+      "has_fare": "false",
+      "fare_desc": "运费待议",
+      "note": []
+    },
+    "protection": [
+      {
+        "title": "7天无理由退货",
+        "desc": "满足相应条件下，卖家需支持7天无理由，其中定制订单不支持“7天无理由退货”。"
+      },
+      {
+        "title": "晚发必赔",
+        "desc": "若商家未按订单约定的时间发货，您可以在订单详情申请赔付"
+      },
+      {
+        "title": "极速退款",
+        "desc": "在符合一定的退款申请原因、时效和退款金额范围内，可享受0秒退款服务。"
+      },
+      {
+        "title": "七天无理由退货",
+        "desc": "本产品支持七天无理由退货"
+      }
+    ],
+    "seller": {
+      "user_id": "3007911820",
+      "login_id": "郭英8855",
+      "member_id": "b2b-30079118205f6b7",
+      "company_name": "ACTIVECHO品牌旗舰店",
+      "company_icon": "https://cbu01.alicdn.com/img/ibank/2020/428/378/22185873824_536529798.jpg",
+      "rank": "5",
+      "rank_img": "https://cbu01.alicdn.com/cms/upload/2015/557/134/2431755_1490276829.png",
+      "tpYear": "8",
+      "returnBuyRate": "24.3",
+      "prercentReturn": "4.19",
+      "evaluates": [
+        {
+          "title": "货描",
+          "score": 4.9,
+          "level": "3"
+        },
+        {
+          "title": "响应",
+          "score": 4.1,
+          "level": "5"
+        },
+        {
+          "title": "发货",
+          "score": 4.3,
+          "level": "-9"
+        }
+      ]
+    }
+  }
+}

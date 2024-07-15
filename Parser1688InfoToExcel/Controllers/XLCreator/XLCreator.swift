@@ -1,98 +1,16 @@
 import AppKit
 
 class XLCreator {
-//    func createExcelFile(from model: BagModel, images: [Data], id: String) {
-//        let book = XWorkBook()
-//        // Create a new sheet
-//        let sheet = setupSheet(book: book)
-//        // Add header row
-//        var cell = createHeaderRow(for: sheet)
-//        cell = createSecondHeader(for: sheet)
-//
-//        var row = 3
-//
-//        for item in model.itemsByColor {
-//
-//            if let imageData = item.imageData, let image = NSImage(data: imageData) {
-//                let imageSize: CGSize = .init(width: 130, height: 130)
-//                let imageCellValue: XImageCell = XImageCell(key: XImages.append(with: image)!, size: imageSize)
-//                cell = addCell(to: sheet, row: row, col: .image, width: 200)
-//                cell.value = .icon(imageCellValue)
-//            }
-//
-//            for sizeAndQuantity in item.dataBySize {
-//                cell = addCell(to: sheet, row: row, col: .brand, width: 300)
-//                cell.value = .text("Chaopindai")
-//
-//                cell = addCell(to: sheet, row: row, col: .article)
-//                cell.value = .text(model.article)
-//
-//                cell = addCell(to: sheet, row: row, col: .itemName)
-//                cell.value = .text(model.title ?? "No title")
-//
-//                cell = addCell(to: sheet, row: row, col: .colorChinese)
-//                cell.value = .text(item.color.chinese)
-//
-//                cell = addCell(to: sheet, row: row, col: .colorEng)
-//                cell.value = .text(item.color.english?.colorNameEng ?? "")
-//
-//                cell = addCell(to: sheet, row: row, col: .size)
-//                cell.value = .text(model.bagSize)
-//
-//                cell = addCell(to: sheet, row: row, col: .quantity)
-//                cell.value = .text(sizeAndQuantity.quantity)
-//
-//                cell = addCell(to: sheet, row: row, col: .price)
-//                cell.value = .text(model.price)
-//
-//                cell = addCell(to: sheet, row: row, col: .weight)
-//                cell.value = .float(model.weight) // !!!
-//
-//                cell = addCell(to: sheet, row: row, col: .bagSize)
-//                cell.value = .text(model.bagSize)
-//
-//                cell = addCell(to: sheet, row: row, col: .compositionChinese)
-//                cell.value = .text(model.compositionChinese)
-//
-//                cell = addCell(to: sheet, row: row, col: .fabric)
-//                cell.value = .text(model.fabric)
-//
-//                cell = addCell(to: sheet, row: row, col: .straps)
-//                cell.value = .text(model.strap)
-//
-//                cell = addCell(to: sheet, row: row, col: .link)
-//                cell.value = .text(currentLink)
-//
-//                sheet.ForRowSetHeight(row, 134)
-//
-//                row += 1
-//            }
-//        }
-//
-//        sheet.buildindex()
-//        sheet.MergeRect(XRect(1, 11, 7, 1))
-//
-//        // Save the workbook to a file
-//        var fileid = book.save("\(id).xlsx")
-//        print("<<<File XLSX generated!>>>")
-//        print("\(fileid)")
-//        fileid.removeLast(5)
-//
-//        saveImages(id: model.article, images: images, to: fileid)
-//        saveImagesByColor(id: model.article, itemsByColors: model.itemsByColor, to: fileid)
-//    }
-
-    func createExcelFile(from clothModel: ClothModel, images: [Data], id: String) {
+    func createXLFile(from model: CommonModel, images: [Data], id: String) {
         let book = XWorkBook()
-        // Create a new sheet
         let sheet = setupSheet(book: book)
-        // Add header row
-        var cell = createHeaderRow(for: sheet)
-        cell = createSecondHeader(for: sheet)
+        createHeaderRow(for: sheet)
+        createSecondHeader(for: sheet)
 
         var row = 3
+        var cell = sheet.AddCell(XCoords(row: row, col: 1))
 
-        for item in clothModel.itemsByColor {
+        for item in model.itemsByColor {
 
             if let imageData = item.imageData, let image = NSImage(data: imageData) {
                 let imageSize: CGSize = .init(width: 130, height: 130)
@@ -101,90 +19,151 @@ class XLCreator {
                 cell.value = .icon(imageCellValue)
             }
 
-            for sizeAndQuantity in item.dataBySize {
-                cell = addCell(to: sheet, row: row, col: .brand, width: 300)
-                cell.value = .text("Chaopindai")
-
-                cell = addCell(to: sheet, row: row, col: .article)
-                cell.value = .text(clothModel.article)
-
-                cell = addCell(to: sheet, row: row, col: .itemName)
-                cell.value = .text(clothModel.title ?? "No title")
-
-                cell = addCell(to: sheet, row: row, col: .colorChinese)
-                cell.value = .text(item.color.chinese)
-
-                cell = addCell(to: sheet, row: row, col: .colorEng)
-                cell.value = .text(item.color.english?.colorNameEng ?? "")
-
-                cell = addCell(to: sheet, row: row, col: .size)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeInfo.sizeNameEng ?? sizeAndQuantity.sizeData.sizeInfo.sizeNameChin)
-
-                cell = addCell(to: sheet, row: row, col: .quantity)
-                cell.value = .text(sizeAndQuantity.quantity)
-
-                cell = addCell(to: sheet, row: row, col: .price)
-                cell.value = .text(clothModel.price)
-
-                cell = addCell(to: sheet, row: row, col: .length)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.length)
-
-                cell = addCell(to: sheet, row: row, col: .shoulders)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.shoulder)
-
-                cell = addCell(to: sheet, row: row, col: .bust)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.bust)
-
-                cell = addCell(to: sheet, row: row, col: .waist)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
-
-                cell = addCell(to: sheet, row: row, col: .hips)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
-
-                cell = addCell(to: sheet, row: row, col: .sleeve)
-                cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
-
-                cell = addCell(to: sheet, row: row, col: .weight)
-                cell.value = .float(clothModel.weight)
-
-                cell = addCell(to: sheet, row: row, col: .compositionChinese)
-                cell.value = .text(clothModel.compositionChinese)
-
-                cell = addCell(to: sheet, row: row, col: .fabric)
-                cell.value = .text(clothModel.fabric)
-
-                cell = addCell(to: sheet, row: row, col: .link)
-                cell.value = .text(currentLink)
-
+            if let bagModel = model as? BagModel {
+                setupBagModelColumns(sheet: sheet, row: row, model: bagModel, item: item)
+                sheet.ForRowSetHeight(row, 134)
+            } else if let clothModel = model as? ClothModel {
+                setupClothModelColumns(sheet: sheet, row: row, model: clothModel, item: item)
                 sheet.ForRowSetHeight(row, 30)
-
-                row += 1
             }
+
+            row += 1
         }
 
         sheet.buildindex()
         sheet.MergeRect(XRect(1, 11, 7, 1))
 
-        row = 3
-        var startRow = 3
-        var finishRow = 3
+        /// Splash photo rows in cloth models
+        if let clothModel  = model as? ClothModel {
+            var startRow = 3
 
-        for (index, item) in clothModel.itemsByColor.enumerated() {
-            let splashCell = item.dataBySize.count
-            sheet.MergeRect(XRect(startRow, 2, 1, splashCell))
-            startRow += splashCell
+            for item in clothModel.itemsByColor {
+                let splashCell = item.dataBySize.count
+                sheet.MergeRect(XRect(startRow, 2, 1, splashCell))
+                startRow += splashCell
+            }
         }
 
         // Save the workbook to a file
-        var fileID = book.save("\(id).xlsx")
+        var fileid = book.save("\(id).xlsx")
         print("<<<File XLSX generated!>>>")
-        print("\(fileID)")
-        fileID.removeLast(5)
+        print("\(fileid)")
+        fileid.removeLast(5)
 
-        saveImages(id: clothModel.article, images: images, to: fileID)
-        saveImagesByColor(id: clothModel.article, itemsByColors: clothModel.itemsByColor, to: fileID)
+        saveImages(id: model.article, images: images, to: fileid)
+        saveImagesByColor(id: model.article, itemsByColors: model.itemsByColor, to: fileid)
     }
 
+    func setupBagModelColumns(sheet: XSheet, row: Int, model: BagModel, item: ItemByColor) {
+        for sizeAndQuantity in item.dataBySize {
+
+            var cell = addCell(to: sheet, row: row, col: .brand, width: 300)
+            cell.value = .text(model.brand)
+
+            cell = addCell(to: sheet, row: row, col: .article)
+            cell.value = .text(model.article)
+
+            cell = addCell(to: sheet, row: row, col: .itemName)
+            cell.value = .text(model.title ?? "No title")
+
+            cell = addCell(to: sheet, row: row, col: .colorChinese)
+            cell.value = .text(item.color.chines)
+
+            cell = addCell(to: sheet, row: row, col: .colorEng)
+            cell.value = .text(item.color.english?.colorNameEng ?? "")
+
+
+            cell = addCell(to: sheet, row: row, col: .quantity)
+            cell.value = .text(sizeAndQuantity.quantity)
+
+            cell = addCell(to: sheet, row: row, col: .price)
+            cell.value = .text(model.price)
+            cell = addCell(to: sheet, row: row, col: .size)
+            cell.value = .text(model.bagSize)
+
+            cell = addCell(to: sheet, row: row, col: .weight)
+            cell.value = .float(model.weight) // !!!
+
+            cell = addCell(to: sheet, row: row, col: .bagSize)
+            cell.value = .text(model.bagSize)
+
+            cell = addCell(to: sheet, row: row, col: .compositionChinese)
+            cell.value = .text(model.compositionChinese)
+
+            cell = addCell(to: sheet, row: row, col: .fabric)
+            cell.value = .text(model.fabric)
+
+            cell = addCell(to: sheet, row: row, col: .straps)
+            cell.value = .text(model.strap)
+
+            cell = addCell(to: sheet, row: row, col: .link)
+            cell.value = .text(currentLink)
+        }
+    }
+
+    func setupClothModelColumns(sheet: XSheet, row: Int, model: ClothModel, item: ItemByColor) {
+        for sizeAndQuantity in item.dataBySize {
+            var cell = addCell(to: sheet, row: row, col: .brand, width: 300)
+            cell.value = .text(model.brand)
+
+            cell = addCell(to: sheet, row: row, col: .article)
+            cell.value = .text(model.article)
+
+            cell = addCell(to: sheet, row: row, col: .itemName)
+            cell.value = .text(model.title ?? "No title")
+
+            cell = addCell(to: sheet, row: row, col: .colorChinese)
+            cell.value = .text(item.color.chines)
+
+            cell = addCell(to: sheet, row: row, col: .colorEng)
+            cell.value = .text(item.color.english?.colorNameEng ?? "")
+
+
+            cell = addCell(to: sheet, row: row, col: .quantity)
+            cell.value = .text(sizeAndQuantity.quantity)
+
+            cell = addCell(to: sheet, row: row, col: .price)
+            cell.value = .text(model.price)
+            cell = addCellForCloth(to: sheet, row: row, col: .size)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeInfo.sizeNameEng ?? sizeAndQuantity.sizeData.sizeInfo.sizeNameChin)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .quantity)
+            cell.value = .text(sizeAndQuantity.quantity)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .price)
+            cell.value = .text(model.price)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .length)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.length)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .shoulders)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.shoulder)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .bust)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.bust)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .waist)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .hips)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .sleeve)
+            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .weight)
+            cell.value = .float(model.weight)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .compositionChinese)
+            cell.value = .text(model.compositionChinese)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .fabric)
+            cell.value = .text(model.fabric)
+
+            cell = addCellForCloth(to: sheet, row: row, col: .link)
+            cell.value = .text(currentLink)
+        }
+    }
 
     func setupSheet(book: XWorkBook) -> XSheet {
         let sheet = book.NewSheet("Persons")
@@ -199,8 +178,8 @@ class XLCreator {
 
         return sheet
     }
-
-    func createSecondHeader(for sheet: XSheet) -> XCell {
+    // MARK: - Headers
+    func createSecondHeader(for sheet: XSheet){
         let headerRow = 2
 
         var cell = sheet.AddCell(XCoords(row: headerRow, col: 1))
@@ -246,55 +225,39 @@ class XLCreator {
         cell = addCell(to: sheet, row: headerRow, col: 21)
         cell.value = .text("Fabric")
         cell = addCell(to: sheet, row: headerRow, col: 23)
-
-        return cell
     }
 
-    func createHeaderRow(for sheet: XSheet) -> XCell {
+    func createHeaderRow(for sheet: XSheet){
         let headerRow = 1
 
         var cell = sheet.AddCell(XCoords(row: headerRow, col: 1))
         cell.value = .text("Brand/品牌")
-
         cell = addCell(to: sheet, row: headerRow, col: 2)
         cell.value = .text("Photo/图片")
-
         cell = addCell(to: sheet, row: headerRow, col: 3)
         cell.value = .text("Article №/货号")
-
         cell = addCell(to: sheet, row: headerRow, col: 4)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 5)
         cell.value = .text("Item name/名称")
-
         cell = addCell(to: sheet, row: headerRow, col: 6)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 7)
         cell.value = .text("Color/颜色")
-
         cell = addCell(to: sheet, row: headerRow, col: 8)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 9)
         cell.value = .text("Size/尺码")
-
         cell = addCell(to: sheet, row: headerRow, col: 10)
         cell.value = .text("Quantity/库存")
-
         cell = addCell(to: sheet, row: headerRow, col: 11)
         cell.value = .text("Wholesale price, CNY/ 批发价格")
-
         cell = addCell(to: sheet, row: headerRow, col: 12)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 13)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 14)
         cell.value = .text("")
-
         cell = addCell(to: sheet, row: headerRow, col: 15)
         cell.value = .text("")
         cell = addCell(to: sheet, row: headerRow, col: 16)
@@ -310,8 +273,6 @@ class XLCreator {
         cell = addCell(to: sheet, row: headerRow, col: 21)
         cell.value = .text("")
         cell = addCell(to: sheet, row: headerRow, col: 22)
-
-        return cell
     }
 
     func addCell(to sheet: XSheet, row: Int, col: Int, width: Int? = nil) -> XCell {
@@ -325,7 +286,19 @@ class XLCreator {
         return cell
     }
 
-    func addCell(to sheet: XSheet, row: Int, col  name: ColumnName, width: Int? = nil) -> XCell {
+    func addCellForCloth(to sheet: XSheet, row: Int, col  name: ColumnNameForCloth, width: Int? = nil) -> XCell {
+        let cell = sheet.AddCell(XCoords(row: row, col: name.rawValue))
+        cell.alignmentHorizontal = .center
+        if let width {
+            cell.width = width
+        }
+        cell.Border = true
+        cell.alignmentHorizontal = .center
+
+        return cell
+    }
+
+    func addCell(to sheet: XSheet, row: Int, col  name: ColumnNameForBags, width: Int? = nil) -> XCell {
         let cell = sheet.AddCell(XCoords(row: row, col: name.rawValue))
         cell.alignmentHorizontal = .center
         if let width {
@@ -359,7 +332,7 @@ func saveImagesByColor(id: String, itemsByColors: [ItemByColor], to directoryPat
             to: directoryPath,
             imageData: photoByColor.imageData,
             id: id,
-            name: photoByColor.color.english?.colorNameEng ?? photoByColor.color.chinese
+            name: photoByColor.color.english?.colorNameEng ?? photoByColor.color.chines
         )
     }
 }

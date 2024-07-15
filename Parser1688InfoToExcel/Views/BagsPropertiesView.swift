@@ -9,18 +9,43 @@ import SwiftUI
 
 struct BagsPropertiesView: View {
     @Binding var bagEditData: BagEditData
+    @State private var maxLabelWidth: CGFloat?
 
     var body: some View {
-        
-        VStack(spacing: 15) {
-            Form {
-                CustomTextField(inputText: $bagEditData.bagSize, title: "Bag size", value: "No data")
-                CustomTextField(inputText: $bagEditData.fabric, title: "Fabric:", value: bagEditData.fabricChinese)
-                CustomTextField(inputText: $bagEditData.straps, title: "Straps", value: bagEditData.strapsData)
-            }
+        Form {
+            CustomTextField(
+                inputText: $bagEditData.bagSize,
+                title: "Bag size",
+                value: "",
+                maxLabelWidth: $maxLabelWidth
+            )
+            Divider()
+            CustomTextField(
+                inputText: $bagEditData.fabric,
+                title: "Fabric:",
+                value: bagEditData.fabricChinese,
+                maxLabelWidth: $maxLabelWidth
+            )
+            Divider()
+            CustomTextField(
+                inputText: $bagEditData.straps,
+                title: "Straps",
+                value: bagEditData.strapsData,
+                maxLabelWidth: $maxLabelWidth
+            )
         }
-        .padding()  
-        .frame(width: 400)
+        .padding()
+        .onPreferenceChange(MaxWidthPreferenceKey.self) { width in
+            maxLabelWidth = max(maxLabelWidth ?? 0, width)
+        }
+        .frame(width: 300)
+    }
+}
+// Define a PreferenceKey to store the maximum width
+struct MaxWidthPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = max(value, nextValue())
     }
 }
 
@@ -28,43 +53,34 @@ struct CustomTextField: View {
     @Binding var inputText: String
     let title: String
     let value: String?
+    @Binding var maxLabelWidth: CGFloat?
 
     var body: some View {
-        VStack {
-                Text(value ?? "")
-                    .font(.system(size: 16))
-                    .foregroundStyle(.black)
-                TextField(text: $inputText, prompt: Text(title)) {
-                    Text(title)
-                }
-                .textFieldStyle(.roundedBorder)
+        VStack(alignment: .leading) {
+            Text("Value: \(value ?? "")")
+                .font(.system(size: 16))
+                .foregroundColor(.black)
+
+            TextField(text: $inputText) {
+                Text(title)
+                    .background(GeometryReader { geometry in
+                        Color.clear.preference(key: MaxWidthPreferenceKey.self, value: geometry.size.width)
+                    })
+                    .frame(width: maxLabelWidth, alignment: .leading)
+            }
+            .textFieldStyle(.roundedBorder)
         }
         .padding()
-        .background(.gray.opacity(0.3), in: RoundedRectangle(cornerRadius: 10))
+        .background(Color.gray.opacity(0.3))
+        .cornerRadius(10)
     }
 }
 
-struct BagEditData: Identifiable {
-    let id: UUID = .init()
-    var fabricChinese: String? = nil
-    var strapsData: String? = nil
-    var bagSize: String = ""
-    var fabric: String = ""
-    var straps: String = ""
-}
+struct SizePreferenceKey: PreferenceKey {
+  static var defaultValue: CGSize = .zero
 
-
-private struct Preview: View {
-
-    @State private var state: BagEditData = .init()
-
-    var body: some View {
-        BagsPropertiesView(bagEditData: $state)
-
-    }
-}
-
-#Preview {
-    Preview()
+  static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
+    value = nextValue()
+  }
 }
 

@@ -7,7 +7,19 @@
 
 import Foundation
 
-struct BagModel {
+protocol CommonModel { 
+    var brand: String { get set }
+    var title: String? { get }
+    var images: [Data] { get }
+    var article: String { get }
+    var articleAndColorSku: String? { get }
+    var productName: String? { get }
+    var price: String { get }
+    var itemsByColor: [ItemByColor] { get }
+}
+
+struct BagModel: CommonModel {
+    var brand: String = ""
     let title: String?
     let images: [Data]
     let article: String
@@ -24,7 +36,8 @@ struct BagModel {
     let strap: String
 }
 
-struct ClothModel {
+struct ClothModel: CommonModel {
+    var brand: String = ""
     let title: String?
     let images: [Data]
     let article: String

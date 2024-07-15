@@ -8,7 +8,7 @@
 import Foundation
 
 class ModelConverter {
-    func convert(from data: DataModel) async throws -> DataModelConverted {
+    func convert(from data: DataModel) async throws -> ConvertedModel {
         let imagesData = await getImagesData(from: data.main_imgs)
         let productProps: ProductProperties = .init(prop: data.product_props)
         let itemPhotosByColor: [PhotoByColor] = await getPhotosByColor(from: data.sku_props)
@@ -22,6 +22,7 @@ class ModelConverter {
             productProperties: productProps,
             price: data.price_info.price,
             mainImagesData: imagesData,
+            mainImagesURL: data.main_imgs,
             itemsByColor: itemsByColor,
             weight: data.delivery_info.unit_weight
         )
@@ -40,25 +41,12 @@ private extension ModelConverter {
     //      "props_names": "海洋蓝;175/100A(L)",
     //      "props_ids": "0:5;1:2"
     //    },
+
+    // MARK: - Create ItemByColor
+
     func transformPropertiesByItem(from propertiesByItem: [[String: StringOrInt]], photosByColor: [PhotoByColor]) -> [ItemByColor] {
 
-         func stringFromStringOrInt(_ value: StringOrInt) -> String {
-             switch value {
-             case .string(let stringValue):
-                 return stringValue
-             case .int(let intValue):
-                 return String(intValue)
-             }
-         }
-
-         // Filter and convert dictionaries
-         let filteredArray: [[String: String]] = propertiesByItem.compactMap { dictionary in
-             var nonNilDictionary: [String: String] = [:]
-             for (key, value) in dictionary {
-                 nonNilDictionary[key] = stringFromStringOrInt(value)
-             }
-             return nonNilDictionary
-         }
+        let filteredArray: [[String: String]] = filterDictArray(from: propertiesByItem)
 
         var itemModels: [ItemWithColorSize] = []
         for property in filteredArray {
@@ -66,7 +54,7 @@ private extension ModelConverter {
             let colorAndSizeString = property[Keys.propNames.rawValue] ?? "No prop names"
 
             let (colorChinese, sizeChinese) = colorAndSizeString.separateSizeFromColor()
-            let colorInfo: ColorInfo = .init(chinese: colorChinese)
+            let colorInfo: ColorInfo = .init(chines: colorChinese)
             let sizeInfo: SizeInfo = .init(sizeChinese: sizeChinese)
 
             itemModels.append(.init(
@@ -76,13 +64,35 @@ private extension ModelConverter {
             ))
         }
 
-        let itemsByColor = convertToItemsByColor(from: itemModels, photosByColor: photosByColor)
+        let itemsByColor = createItemsByColor(from: itemModels, photosByColor: photosByColor)
         print("ItemsByColor created. Total: \(itemsByColor.count)")
 
         return itemsByColor
     }
 
-    func convertToItemsByColor(from models: [ItemWithColorSize], photosByColor: [PhotoByColor]) -> [ItemByColor] {
+    func filterDictArray(from propertiesByItem: [[String: StringOrInt]]) ->[[String: String]] {
+        let filteredArray: [[String: String]] = propertiesByItem.compactMap { dictionary in
+            var nonNilDictionary: [String: String] = [:]
+            for (key, value) in dictionary {
+                nonNilDictionary[key] = stringFromStringOrInt(value)
+            }
+            return nonNilDictionary
+        }
+
+        return filteredArray
+    }
+
+    func stringFromStringOrInt(_ value: StringOrInt) -> String {
+        switch value {
+        case .string(let stringValue):
+            return stringValue
+        case .int(let intValue):
+            return String(intValue)
+        }
+    }
+
+
+    func createItemsByColor(from models: [ItemWithColorSize], photosByColor: [PhotoByColor]) -> [ItemByColor] {
         var colorGroupedData: [ColorInfo: [SizeAndQuantity]] = [:]
 
         for item in models {
@@ -98,7 +108,7 @@ private extension ModelConverter {
 
         // Convert to array of ItemModel
         let itemsByColor: [ItemByColor] = colorGroupedData.map { (color, dataBySize) in
-            let imageData = photosByColor.first { $0.colorChinese == color.chinese }?.imageData
+            let imageData = photosByColor.first { $0.colorChinese == color.chines }?.imageData
             return ItemByColor(color: color, imageData: imageData, dataBySize: dataBySize)
         }
 

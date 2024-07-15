@@ -28,12 +28,12 @@ struct SizeAndQuantity {
 }
 
 struct ColorInfo: Hashable {
-    let chinese: String
+    let chines: String
     var english: ColorNameEng?
 
-    init(chinese: String) {
-        self.chinese = chinese
-        self.english = getColorNameEng(from: chinese)
+    init(chines: String) {
+        self.chines = chines
+        self.english = getColorNameEng(from: chines)
     }
 
     private func getColorNameEng(from colorNameChinese: String) -> ColorNameEng? {

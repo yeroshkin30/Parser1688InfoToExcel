@@ -27,6 +27,11 @@ class NetworkController {
 //        "x-rapidapi-host": "1688-product2.p.rapidapi.com"
 //    ]
 
+
+    let headersImages = [
+        "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
+        "x-rapidapi-host": "16881.p.rapidapi.com"
+    ]
     init() {
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = URLCache(
@@ -39,10 +44,16 @@ class NetworkController {
         self.session =  URLSession(configuration: configuration)
     }
 
-    func getMainModel(for id: String) async throws -> MainModel {
-        var urlRequest = URLRequest(url: URL(string: "https://1688-product2.p.rapidapi.com/1688/v2/item_detail?item_id=\(String(id))")!)
+    // MARK: - Images
+
+    func getImagesURLs(from urlString: String) async throws -> [URL] {
+        guard let id = getIDNumberFromURL(from: urlString) else {
+            throw Errors.cantGetIDFromURL
+        }
+
+        var urlRequest = URLRequest(url: URL(string: "https://16881.p.rapidapi.com/api?api=item_detail_1688&num_iid=\(String(id))")!)
         urlRequest.httpMethod = "GET"
-        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.allHTTPHeaderFields = headersImages
         urlRequest.timeoutInterval = 10
         urlRequest.cachePolicy = .useProtocolCachePolicy
 
@@ -53,14 +64,16 @@ class NetworkController {
         }
 
         // Check if the response was from cache
-               if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
-                   print("Cache Status: \(userInfo)")
-               }
+        if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
+            print("Cache Status: \(userInfo)")
+        }
 
-        let mainModel = try JSONDecoder().decode(MainModel.self, from: data)
+        let mainModel = try JSONDecoder().decode(New1688Images.self, from: data)
 
-        return mainModel
+        return mainModel.result.item.desc_imgs.compactMap { URL(string: $0) }
     }
+    
+    // MARK: - MainModel
 
     func getMainModel(from urlString: String) async throws -> MainModel {
         guard let id = getIDNumberFromURL(from: urlString) else {
