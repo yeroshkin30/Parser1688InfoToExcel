@@ -23,11 +23,12 @@ class XLCreator {
                 setupBagModelColumns(sheet: sheet, row: row, model: bagModel, item: item)
                 sheet.ForRowSetHeight(row, 134)
             } else if let clothModel = model as? ClothModel {
-                setupClothModelColumns(sheet: sheet, row: row, model: clothModel, item: item)
-                sheet.ForRowSetHeight(row, 30)
+                for sizeAndQuantity in item.dataBySize {
+                    setupClothModelColumns(sheet: sheet, row: row, model: clothModel, item: item, sizeAndQuantity: sizeAndQuantity)
+                    sheet.ForRowSetHeight(row, 30)
+                    row += 1
+                }
             }
-
-            row += 1
         }
 
         sheet.buildindex()
@@ -101,69 +102,68 @@ class XLCreator {
         }
     }
 
-    func setupClothModelColumns(sheet: XSheet, row: Int, model: ClothModel, item: ItemByColor) {
-        for sizeAndQuantity in item.dataBySize {
-            var cell = addCell(to: sheet, row: row, col: .brand, width: 300)
-            cell.value = .text(model.brand)
+    func setupClothModelColumns(sheet: XSheet, row: Int, model: ClothModel, item: ItemByColor, sizeAndQuantity: SizeAndQuantity) {
+        var cell = addCell(to: sheet, row: row, col: .brand, width: 300)
+        cell.value = .text(model.brand)
 
-            cell = addCell(to: sheet, row: row, col: .article)
-            cell.value = .text(model.article)
+        cell = addCell(to: sheet, row: row, col: .article)
+        cell.value = .text(model.article)
 
-            cell = addCell(to: sheet, row: row, col: .itemName)
-            cell.value = .text(model.title ?? "No title")
+        cell = addCell(to: sheet, row: row, col: .itemName)
+        cell.value = .text(model.title ?? "No title")
 
-            cell = addCell(to: sheet, row: row, col: .colorChinese)
-            cell.value = .text(item.color.chines)
+        cell = addCell(to: sheet, row: row, col: .colorChinese)
+        cell.value = .text(item.color.chines)
 
-            cell = addCell(to: sheet, row: row, col: .colorEng)
-            cell.value = .text(item.color.english?.colorNameEng ?? "")
+        cell = addCell(to: sheet, row: row, col: .colorEng)
+        cell.value = .text(item.color.english?.colorNameEng ?? "")
 
 
-            cell = addCell(to: sheet, row: row, col: .quantity)
-            cell.value = .text(sizeAndQuantity.quantity)
+        cell = addCell(to: sheet, row: row, col: .quantity)
+        cell.value = .text(sizeAndQuantity.quantity)
 
-            cell = addCell(to: sheet, row: row, col: .price)
-            cell.value = .text(model.price)
-            cell = addCellForCloth(to: sheet, row: row, col: .size)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeInfo.sizeNameEng ?? sizeAndQuantity.sizeData.sizeInfo.sizeNameChin)
+        cell = addCell(to: sheet, row: row, col: .price)
+        cell.value = .text(model.price)
+        cell = addCellForCloth(to: sheet, row: row, col: .size)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeInfo.sizeNameEng ?? sizeAndQuantity.sizeData.sizeInfo.sizeNameChin)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .quantity)
-            cell.value = .text(sizeAndQuantity.quantity)
+        cell = addCellForCloth(to: sheet, row: row, col: .quantity)
+        cell.value = .text(sizeAndQuantity.quantity)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .price)
-            cell.value = .text(model.price)
+        cell = addCellForCloth(to: sheet, row: row, col: .price)
+        cell.value = .text(model.price)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .length)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.length)
+        cell = addCellForCloth(to: sheet, row: row, col: .length)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.length)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .shoulders)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.shoulder)
+        cell = addCellForCloth(to: sheet, row: row, col: .shoulders)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.shoulder)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .bust)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.bust)
+        cell = addCellForCloth(to: sheet, row: row, col: .bust)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.bust)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .waist)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+        cell = addCellForCloth(to: sheet, row: row, col: .waist)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .hips)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+        cell = addCellForCloth(to: sheet, row: row, col: .hips)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .sleeve)
-            cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
+        cell = addCellForCloth(to: sheet, row: row, col: .sleeve)
+        cell.value = .text(sizeAndQuantity.sizeData.sizeProperties.waist)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .weight)
-            cell.value = .float(model.weight)
+        cell = addCellForCloth(to: sheet, row: row, col: .weight)
+        cell.value = .float(model.weight)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .compositionChinese)
-            cell.value = .text(model.compositionChinese)
+        cell = addCellForCloth(to: sheet, row: row, col: .compositionChinese)
+        cell.value = .text(model.compositionChinese)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .fabric)
-            cell.value = .text(model.fabric)
+        cell = addCellForCloth(to: sheet, row: row, col: .fabric)
+        cell.value = .text(model.fabric)
 
-            cell = addCellForCloth(to: sheet, row: row, col: .link)
-            cell.value = .text(currentLink)
-        }
+        cell = addCellForCloth(to: sheet, row: row, col: .link)
+        cell.value = .text(currentLink)
     }
+
 
     func setupSheet(book: XWorkBook) -> XSheet {
         let sheet = book.NewSheet("Persons")
@@ -306,7 +306,7 @@ class XLCreator {
         }
         cell.Border = true
         cell.alignmentHorizontal = .center
-
+        
         return cell
     }
 }
