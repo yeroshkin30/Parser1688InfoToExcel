@@ -2,7 +2,7 @@ import AppKit
 
 
 class NetworkController {
-
+    // 1688 product https://rapidapi.com/solo-xwz/api/1688-product2
     private let session: URLSession
     private let headers = [
         "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
@@ -32,6 +32,7 @@ class NetworkController {
         "x-rapidapi-key": "2ea9f0a3c2msh2669d86449795bcp1c453ajsn0b765c765b17",
         "x-rapidapi-host": "16881.p.rapidapi.com"
     ]
+
     init() {
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = URLCache(
@@ -60,7 +61,7 @@ class NetworkController {
         let (data, response) = try await session.data(for: urlRequest)
 
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw Errors.dataNotFound
+            throw Errors.imagesFromNew1668ModelNotFound
         }
 
         // Check if the response was from cache
@@ -203,4 +204,5 @@ enum Errors: Error {
     case dataNotFound
     case photoDataNotFound
     case cantCreateImageFromData
+    case imagesFromNew1668ModelNotFound
 }

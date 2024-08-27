@@ -17,12 +17,12 @@ class ImageSaveController {
          }
 
         let articleDirectory = downloadsDirectory.appendingPathComponent(article)
-           do {
-               try FileManager.default.createDirectory(at: articleDirectory, withIntermediateDirectories: true, attributes: nil)
-               print("Folder created or already exists at: \(articleDirectory.path)")
-           } catch {
-               print("Error creating folder: \(error.localizedDescription)")
-               return
+        do {
+            try FileManager.default.createDirectory(at: articleDirectory, withIntermediateDirectories: true, attributes: nil)
+            print("Folder created or already exists at: \(articleDirectory.path)")
+        } catch {
+            print("Error creating folder: \(error.localizedDescription)")
+            return
         }
 
         let filePath = articleDirectory.appendingPathComponent("\(name).png")

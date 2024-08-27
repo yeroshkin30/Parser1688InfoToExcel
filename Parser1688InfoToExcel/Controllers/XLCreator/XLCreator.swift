@@ -22,6 +22,7 @@ class XLCreator {
             if let bagModel = model as? BagModel {
                 setupBagModelColumns(sheet: sheet, row: row, model: bagModel, item: item)
                 sheet.ForRowSetHeight(row, 134)
+                row += 1
             } else if let clothModel = model as? ClothModel {
                 for sizeAndQuantity in item.dataBySize {
                     setupClothModelColumns(sheet: sheet, row: row, model: clothModel, item: item, sizeAndQuantity: sizeAndQuantity)

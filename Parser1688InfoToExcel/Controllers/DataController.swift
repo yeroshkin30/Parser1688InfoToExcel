@@ -41,7 +41,9 @@ class DataController {
             do {
                 let convertedModel: ConvertedModel = try await getConvertedModel(from: string)
                 loadingState = .loaded("Converted model created")
-                imageURLs = try await networkController.getImagesURLs(from: string)
+                let imgURLS = try await networkController.getImagesURLs(from: string)
+                print("Extracted \(imgURLS) imageURLs")
+                imageURLs = imgURLS
                 showSizeView = true
 
                 switch itemType {
@@ -95,10 +97,10 @@ class DataController {
     func createTestJson() {
         currentLink = "testing"
         setupTestModelFromLocalJSON()
-        testImagesURL()
+//        testImagesURL()
     }
     func setupTestModelFromLocalJSON() {
-        guard let path = Bundle.main.path(forResource: "bigJSON", ofType: "json") else { return }
+        guard let path = Bundle.main.path(forResource: "bags", ofType: "json") else { return }
 
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
