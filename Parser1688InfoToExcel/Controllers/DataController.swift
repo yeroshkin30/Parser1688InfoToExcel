@@ -36,7 +36,8 @@ class DataController {
         currentLink = string
         showSizeView = false
         convertedModel = nil
-        
+        imageURLs = []
+
         Task {
             do {
                 let convertedModel: ConvertedModel = try await getConvertedModel(from: string)
