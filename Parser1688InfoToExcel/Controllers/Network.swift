@@ -68,10 +68,15 @@ class NetworkController {
         if let userInfo = httpResponse.value(forHTTPHeaderField: "X-Cache-Status") {
             print("Cache Status: \(userInfo)")
         }
-
         let mainModel = try JSONDecoder().decode(New1688Images.self, from: data)
+        var urls: [URL] = []
+        if !mainModel.result.item.desc_imgs.isEmpty {
+            urls = mainModel.result.item.desc_imgs.compactMap { URL(string: $0) }
+        } else {
+            urls = mainModel.result.item.desc_items.compactMap { URL(string: $0.pic) }
+        }
 
-        return mainModel.result.item.desc_imgs.compactMap { URL(string: $0) }
+        return urls
     }
     
     // MARK: - MainModel

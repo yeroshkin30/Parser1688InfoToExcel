@@ -22,5 +22,11 @@ struct ImagesURL: Codable {
 
 struct DeskImages: Codable {
     let desc_imgs: [String]
+    let desc_items: [DeskItems]
     let images: [String]
+}
+
+struct DeskItems: Codable {
+    let num_iid: String
+    let pic: String
 }
